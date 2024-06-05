@@ -1,0 +1,22 @@
+[General]
+clipboardGroup=PostScreenshotCopyImage
+launchAction=DoNotTakeScreenshot
+onLaunchAction=DoNotTakeScreenshot
+rememberLastRectangularRegion=Always
+rememberSelectionRect=Always
+showMagnifier=ShowMagnifierAlways
+
+[ImageSave]
+imageFilenameTemplate=screenshot_<dd>.<MM>.<yyyy>_<h>.<mm>.<ss> <A>
+imageSaveLocation=file:///home/Pictures/screenshot
+translatedScreenshotsFolder=Screenshots
+
+[Save]
+defaultSaveLocation=file:///home/Pictures/screenshot
+saveFilenameFormat=Screenshot_%D.%M.%Y_%H.%m.%S
+
+[VideoSave]
+preferredVideoFormat=0
+translatedScreencastsFolder=screencasts
+videoFilenameTemplate=screencast_<dd>.<MM>.<yyyy>_<h>.<mm>.<ss> <A>
+videoSaveLocation=file:///home/Pictures/screenshot
