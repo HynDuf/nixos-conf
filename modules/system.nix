@@ -223,6 +223,7 @@ in {
         # libs
         bc
         libgcc
+        gcc
         python312
         python312Packages.pip
         go

@@ -22,11 +22,9 @@
             v = "nvim";
             r = "joshuto";
         };
-        zplug = {
-            enable = true;
-            plugins = [
-            { name = "zsh-users/zsh-autosuggestions"; } # Simple plugin installation
-            ];
+        history = {
+            ignoreAllDups = true;
+            size = 100000;
         };
 
     };

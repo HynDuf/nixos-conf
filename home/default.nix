@@ -33,10 +33,6 @@
         # changes in each release.
         stateVersion = "23.11";
 
-        file.".profile" = {
-            source = ./.profile;
-        };
-
         file."bin" = {
             source = ../bin;
 
