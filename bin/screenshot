@@ -4,17 +4,14 @@ path=$HOME/Pictures/screenshot
 time=$(date "+%d.%m.%y_%I.%M.%S %p")
 
 case $1 in
-    # "-f") maim --hidecursor "$HOME/Pictures/screenshot/$(date).png";;
-    # "-s") maim --hidecursor --select "$HOME/Pictures/screenshot/$(date).png";;
-    # "-fc") maim --hidecursor | xclip -selection clipboard -t image/png;;
-    # "-sc") maim --hidecursor --select | xclip -selection clipboard -t image/png;;
-    # "-fd") maim -d "$2" --hidecursor "$HOME/Pictures/screenshot/$(date).png";;
-    # "-sd") maim -d "$2" --hidecursor --select "$HOME/Pictures/screenshot/$(date).png";;
-    # "-fcd") maim -d "$2" --hidecursor | xclip -selection clipboard -t image/png;;
-    # "-scd") maim -d "$2" --hidecursor --select | xclip -selection clipboard -t image/png;;
+    "-f") maim --hidecursor "$HOME/Pictures/screenshot/$(date).png";;
+    "-s") maim --hidecursor --select "$HOME/Pictures/screenshot/$(date).png";;
+    "-fc") maim --hidecursor | xclip -selection clipboard -t image/png;;
+    "-sc") maim --hidecursor --select | xclip -selection clipboard -t image/png;;
+    "-fd") maim -d "$2" --hidecursor "$HOME/Pictures/screenshot/$(date).png";;
+    "-sd") maim -d "$2" --hidecursor --select "$HOME/Pictures/screenshot/$(date).png";;
+    "-fcd") maim -d "$2" --hidecursor | xclip -selection clipboard -t image/png;;
+    "-scd") maim -d "$2" --hidecursor --select | xclip -selection clipboard -t image/png;;
 
-    "-f") spectacle -f -o "$path/screenshot_$time.png" -b;;
-    "-s") spectacle -r -o "$path/screenshot_$time.png" -b;;
-    "-fc") spectacle -f -c -b;;
-    "-sc") spectacle -r -c -b;;
+    "-edit") spectacle -r -c -b;;
 esac

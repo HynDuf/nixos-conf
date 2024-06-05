@@ -1,0 +1,2 @@
+- [ ] Find a better alternative to `grep` for better searching (maybe with highlighting too)
+- [ ] Write Firefox custom css guide

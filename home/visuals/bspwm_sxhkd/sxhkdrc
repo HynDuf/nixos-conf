@@ -8,7 +8,7 @@ super + Return
 
 # program launcher
 super + c
-    rofi -show drun
+    rofi -show drun -theme "$HOME/.config/rofi/themes/app-launcher.rasi"
 
 # make sxhkd reload its config
 super + shift + r
@@ -193,9 +193,9 @@ super + s
 super + shift + s
     ~/bin/screenshot -sc
 
-# clipboard cropped
+# clipboard cropped with edit
 ctrl + Print
-    ~/bin/screenshot -sc
+    ~/bin/screenshot -edit
 
 #
 # utils
@@ -204,6 +204,3 @@ ctrl + Print
 # lock screen
 super + g
     ~/bin/lockscreen
-
-super + shift + v
-    copyq menu

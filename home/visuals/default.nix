@@ -3,7 +3,7 @@
         ./x11
         ./bspwm_sxhkd
         ./cursor
-        # ./rofi
+        ./rofi
         ./polybar
         ./picom
         ./gtk

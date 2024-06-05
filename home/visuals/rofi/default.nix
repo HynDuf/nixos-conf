@@ -5,7 +5,7 @@
     };
 
     home.file.".config/rofi" = {
-        source = ./configs;
+        source = ./.;
         # copy the scripts directory recursively
         recursive = true;
     };
