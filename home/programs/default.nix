@@ -5,7 +5,6 @@
 
         ./shells
 
-        ./firefox
         ./vscode
         ./neovim
         ./zathura

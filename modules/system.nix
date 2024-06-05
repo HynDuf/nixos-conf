@@ -180,7 +180,6 @@ in {
     environment.systemPackages = with pkgs; [
         vim
         neovim
-        vscode
         kitty
         curl
         git
