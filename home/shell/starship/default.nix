@@ -1,7 +1,5 @@
 { pkgs, config, ... }:
 
-# fish
-
 let
     font = "JetBrainsMono Nerd Font";
 in

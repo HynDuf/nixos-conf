@@ -1,15 +1,13 @@
 add_newline = true
 
-format = '''[╭─](#d10475) ❄️ $username$hostname$directory$git_branch$git_commit$git_state$git_status$jobs$cmd_duration$python
-[╰─](#d10475) $character'''
+format = '''[╭─](#cba6f7) 🌸 $username$hostname$directory$git_branch$git_commit$git_state$git_status$jobs$cmd_duration$python
+[╰─](#cba6f7) $character'''
 
 # right_format = '$time'
 
 [character]
 success_symbol = '[➾](bold green)'
 error_symbol = '[➾](bold red)'
-# success_symbol = '😸'
-# error_symbol = '😿'
 
 [shell]
 disabled = false
@@ -22,25 +20,25 @@ zsh_indicator = '[ZSH](bright-white) '
 disabled = false
 show_always = true
 format =  '[$user]($style)'
-style_user = '#00c8ff'
-style_root = '#ff006a'
+style_user = 'bold fg:#eba0ac'
+style_root = 'bold fg:#f38ba8'
 
 [hostname]
 format = '@[$hostname]($style) '
 disabled = false
-style = '#ff006a'
+style = 'bold blue'
 ssh_only = false
 
 [git_branch]
 only_attached = true
 format = '[$symbol$branch]($style) '
 symbol = ''
-style = 'bright-yellow bold'
+style = 'bold fg:#f9e2af'
 
 [git_commit]
 only_detached = true
 format = '[ﰖ$hash]($style) '
-style = 'bright-yellow bold'
+style = 'bold fg:#f9e2af'
 
 [git_state]
 style = 'bright-purple bold'

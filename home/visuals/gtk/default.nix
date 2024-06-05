@@ -5,9 +5,9 @@
         catppuccin = {
             enable = true;
             flavor = "mocha";
-            accent = "blue";
+            accent = "red";
             size = "standard";
-            tweaks = [ "normal" ];
+            tweaks = [ "rimless" ];
         };
     };
 }

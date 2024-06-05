@@ -1,13 +1,13 @@
 {config, ...}:
 {
     imports = [
-        ./terminals.nix
-        ./fish.nix
+        ./kitty
+        ./zsh
         ./starship
     ];
 
     home.sessionVariables = {
-        EDITOR = "vim";
+        EDITOR = "nvim";
         BROWSER = "firefox";
         TERMINAL = "kitty";
     };
