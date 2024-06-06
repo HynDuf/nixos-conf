@@ -6,6 +6,7 @@
         ./shells
 
         ./vscode
+        ./chrome
         ./neovim
         ./zathura
 

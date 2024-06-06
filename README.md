@@ -1,9 +1,7 @@
-# Yoru - NixOS dotfiles
+# 夜 - 🌸 Yoru 🌙 | My NixOS home 
 
-This is heavily taken from [Aqu4holic - NixOS Configs](https://github.com/aqu4holic/yuki)
+This is a complete NixOS porting and refactoring of my beloved good-old-days [Arch Linux dotfiles](https://github.com/HynDuf/dotfiles)
 
-## Firefox Custom `chrome` CSS
+## Credits
 
-## Add `copyq` shortcuts for "Show the tray menu" as Super + Shift + V
-
-The old way of using `sxhkd` to map `copyq menu` to Super + Shift + V is deprecated. As it doesn't work properly on my NixOS anymore.
+This wouldn't be possible without the help of [Aqu4holic - NixOS Configs](https://github.com/aqu4holic/yuki)
