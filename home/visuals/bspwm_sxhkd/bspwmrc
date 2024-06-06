@@ -1,6 +1,5 @@
 #!usr/bin/env bash
 
-# export SXHKD_SHELL=/bin/sh
 pgrep -x sxhkd > /dev/null || sxhkd &
 
 xsetroot -cursor_name left_ptr &
@@ -14,8 +13,8 @@ feh --bg-fill ~/Pictures/jelly-astronaut.jpg &
 ibus-daemon -drxR &
 nm-applet &
 pgrep -x battery-alert >/dev/null || ~/bin/battery-alert &
-pidof redshift || redshift -l "12:125" -t "6500:3200" &
 pidof syncthing || syncthing -no-browser &
+pidof redshift || redshift &
 trash-empty -f 30 &
 # wmname LG3D & # This is for IntellJ and IntellJ-based (Android Studio)
 copyq &
@@ -39,6 +38,4 @@ bspc config pointer_action1 move
 bspc config pointer_action2 resize_side
 bspc config pointer_action2 resize_corner
 
-bspc rule -a Firefox desktop=^2 state=monocle
-bspc rule -a discord desktop=^3 state=monocle
-bspc config external_rules_command "$HOME/bin/spotify-rule"
+"$HOME/bin/set_bspwm_rule" &

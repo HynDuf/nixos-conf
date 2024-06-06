@@ -11,5 +11,6 @@
         ./zathura
 
         ./spectacle
+        ./redshift
     ];
 }

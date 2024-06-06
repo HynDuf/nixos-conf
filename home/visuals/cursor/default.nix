@@ -2,12 +2,7 @@
 {
     home.pointerCursor = {
         size = 30;
-        package = pkgs.capitaine-cursors;
-        name = "capitaine-cursors";
-
-        x11 = {
-            enable = true;
-            defaultCursor = "left_ptr";
-        };
+        package = pkgs.catppuccin-cursors.mochaBlue;
+        name = "Catppuccin-Mocha-Blue-Cursors";
     };
 }

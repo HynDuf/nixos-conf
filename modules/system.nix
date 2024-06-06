@@ -81,11 +81,6 @@ in {
             startx = {
                 enable = true;
             };
-
-            # autoLogin = {
-            #     enable = true;
-            #     user = username;
-            # };
         };
     };
 
@@ -200,13 +195,8 @@ in {
         # display
         brightnessctl
 
-        # ibus
-        # ibus-engines.bamboo
-
         # for customization
-        bspwm
         bsp-layout
-        feh
         sxhkd
         qalculate-gtk
         eww
@@ -222,7 +212,6 @@ in {
         # libs
         bc
         libgcc
-        gcc
         python312
         python312Packages.pip
         go
