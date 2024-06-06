@@ -208,7 +208,7 @@ in {
         bsp-layout
         feh
         sxhkd
-        rofi
+        qalculate-gtk
         eww
         dunst
         picom

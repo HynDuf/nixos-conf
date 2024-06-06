@@ -2,6 +2,9 @@
 {
     programs.rofi = {
         enable = true;
+        plugins = [
+            pkgs.rofi-emoji
+        ];
     };
 
     home.file.".config/rofi" = {

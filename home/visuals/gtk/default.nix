@@ -5,9 +5,13 @@
         catppuccin = {
             enable = true;
             flavor = "mocha";
-            accent = "red";
+            accent = "maroon";
             size = "standard";
             tweaks = [ "rimless" ];
+        };
+        font = {
+            name = "JetBrainsMono Nerd Font";
+            size = 11;
         };
     };
 }
