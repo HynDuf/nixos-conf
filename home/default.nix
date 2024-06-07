@@ -46,6 +46,8 @@
 
             recursive = true;
         };
+
+        file.".local/share/fonts".source = ./custom_fonts;
     };
 
     # Let home Manager install and manage itself.

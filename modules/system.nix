@@ -21,6 +21,9 @@ in {
 
     # Allow unfree packages
     nixpkgs.config.allowUnfree = true;
+    nixpkgs.config.permittedInsecurePackages = [
+        "xpdf-4.05"
+    ];
 
     # do garbage collection weekly to keep disk usage low
     nix.gc = {

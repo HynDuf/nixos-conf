@@ -20,9 +20,11 @@
         bat # A "cat" drop-in replacement
 
         # misc
+        file
         which
         tree
         lshw
+        trash-cli
 
         # misc ui
         kdePackages.spectacle
@@ -47,6 +49,10 @@
         usbutils # lsusb
 
         gcc
+        telegram-desktop
+        xpdf
+        xlsx2csv
+        mpv
     ];
 
     programs = {

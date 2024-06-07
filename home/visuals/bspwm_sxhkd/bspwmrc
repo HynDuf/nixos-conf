@@ -16,7 +16,7 @@ nm-applet &
 pgrep -x battery-alert >/dev/null || ~/bin/battery-alert &
 pidof syncthing || syncthing -no-browser &
 pidof redshift || redshift &
-trash-empty -f 30 &
+trash-empty -f 40 &
 # wmname LG3D & # This is for IntellJ and IntellJ-based (Android Studio)
 copyq &
 
