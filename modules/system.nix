@@ -132,11 +132,9 @@ in {
 
     fonts = {
         packages = with pkgs; [
-        # icon fonts
-        material-design-icons
-        material-icons
-
         # normal fonts
+        jetbrains-mono
+        google-fonts
         noto-fonts
         noto-fonts-cjk
         noto-fonts-emoji
