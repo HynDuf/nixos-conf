@@ -7,6 +7,7 @@ xset r rate 330 20 &
 
 setxkbmap -option caps:swapescape &
 
+dunst &
 "$HOME/bin/launch.sh" &
 picom &
 feh --bg-fill ~/Pictures/jelly-astronaut.jpg &

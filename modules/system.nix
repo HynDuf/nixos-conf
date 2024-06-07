@@ -217,6 +217,8 @@ in {
         python312
         python312Packages.pip
         go
+
+        libnotify
     ];
 
     # Enable CUPS to print documents.
