@@ -13,7 +13,7 @@
     };
 
     xdg.configFile."polybar" = {
-        source = ./.;
+        source = ./config;
 
         recursive = true;
     };

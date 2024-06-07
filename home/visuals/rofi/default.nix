@@ -8,8 +8,7 @@
     };
 
     xdg.configFile."rofi" = {
-        source = ./.;
-        # copy the scripts directory recursively
+        source = ./config;
         recursive = true;
     };
 }

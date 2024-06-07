@@ -1,14 +1,9 @@
 { pkgs, config, ... }:
 {
     programs.btop = {
-        enable = true; # replacement of htop/nmon
-
-        extraConfig = builtins.readFile ./btop.conf;
+        enable = true;
+        settings = {
+            color_theme = "adapta";
+        };
     };
-    xdg.configFile."btop" = {
-        source = ./config;
-
-        recursive = true;
-    };
-
 }
