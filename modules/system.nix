@@ -132,22 +132,20 @@ in {
 
     fonts = {
         packages = with pkgs; [
-        # normal fonts
-        jetbrains-mono
-        google-fonts
-        noto-fonts
-        noto-fonts-cjk
-        noto-fonts-emoji
+            # normal fonts
+            noto-fonts
+            noto-fonts-cjk
+            noto-fonts-emoji
 
-        # nerdfonts
-        (
-            nerdfonts.override {
-                fonts = [
-                    "FiraCode"
-                    "JetBrainsMono"
-                ];
-            }
-        )
+            # nerdfonts
+            (
+                nerdfonts.override {
+                    fonts = [
+                        "FiraCode"
+                        "JetBrainsMono"
+                    ];
+                }
+            )
 
         ];
 
