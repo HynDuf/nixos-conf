@@ -7,7 +7,7 @@
         ];
     };
 
-    home.file.".config/rofi" = {
+    xdg.configFile."rofi" = {
         source = ./.;
         # copy the scripts directory recursively
         recursive = true;

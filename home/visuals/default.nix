@@ -8,5 +8,6 @@
         ./picom
         ./gtk
         ./dunst
+        ./eww
     ];
 }

@@ -5,8 +5,10 @@
 
         extraConfig = builtins.readFile ./btop.conf;
     };
+    xdg.configFile."btop" = {
+        source = ./config;
 
-    # home.file.".config/btop/btop.conf" = {
-    #     source = ./btop.conf;
-    # };
+        recursive = true;
+    };
+
 }

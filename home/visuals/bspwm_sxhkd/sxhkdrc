@@ -6,21 +6,29 @@
 super + Return
     kitty
 
-# program launcher
-super + c
-    rofi -show drun -theme "$HOME/.config/rofi/themes/app-launcher.rasi"
-# emoji selector launcher
-super + shift + e
-    rofi -modi emoji -show emoji -theme "$HOME/.config/rofi/themes/emojimenu.rasi"
-# Open Power menu
-super + alt + z
-	~/bin/powermenu
-# calculator 
-super + shift + c
-    bspc rule -a \* -o state=floating && qalculate-gtk
 # make sxhkd reload its config
 super + shift + r
     pkill -USR1 -x sxhkd
+
+# program launcher
+super + c
+    rofi -show drun -theme "$HOME/.config/rofi/themes/app-launcher.rasi"
+
+# emoji selector launcher
+super + shift + e
+    rofi -modi emoji -show emoji -theme "$HOME/.config/rofi/themes/emojimenu.rasi"
+
+# Open Power menu
+super + alt + z
+	~/bin/powermenu
+
+# calculator 
+super + shift + c
+    bspc rule -a \* -o state=floating && qalculate-gtk
+
+# calendar
+super + shift + f
+    ~/bin/calendar-launcher
 
 #
 # bspwm hotkeys

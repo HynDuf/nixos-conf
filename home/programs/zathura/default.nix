@@ -7,4 +7,7 @@
         #     flavor = "mocha";
         # };
     };
+    xdg.configFile."zathura/zathurarc" = {
+        source = ./zathurarc;
+    };
 }

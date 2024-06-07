@@ -49,7 +49,7 @@ in {
         LC_NUMERIC = "vi_VN";
         LC_PAPER = "vi_VN";
         LC_TELEPHONE = "vi_VN";
-        LC_TIME = "vi_VN";
+        LC_TIME = "en_US.UTF-8";
     };
 
     i18n.inputMethod = {

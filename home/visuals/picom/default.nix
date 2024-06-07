@@ -11,10 +11,6 @@
         # };
     };
 
-    # home.file.".config/picom/picom.conf" = {
-    #     source = ./picom.conf;
-    # };
-
     xdg.configFile."picom/picom.conf" = {
         source = lib.mkForce ./picom.conf;
     };
