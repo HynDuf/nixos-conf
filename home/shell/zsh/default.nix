@@ -13,6 +13,7 @@
         zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
         bindkey "^[[1;5C" forward-word
         bindkey "^[[1;5D" backward-word
+        eval "$(direnv hook zsh)"
         '';
         autocd = true;
         defaultKeymap = "emacs";

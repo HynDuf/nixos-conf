@@ -12,6 +12,9 @@ super + c
 # emoji selector launcher
 super + shift + e
     rofi -modi emoji -show emoji -theme "$HOME/.config/rofi/themes/emojimenu.rasi"
+# Open Power menu
+super + alt + z
+	~/bin/powermenu
 # calculator 
 super + shift + c
     bspc rule -a \* -o state=floating && qalculate-gtk

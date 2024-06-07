@@ -6,5 +6,6 @@
         ./fdzf
         ./git_ssh
         ./joshuto
+        ./direnv
     ];
 }

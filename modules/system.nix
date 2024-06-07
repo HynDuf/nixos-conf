@@ -70,6 +70,8 @@ in {
     #    xkbVariant = "";
     # };
 
+    services.fwupd.enable = true;
+
     services.xserver = {
         enable = true;
 
