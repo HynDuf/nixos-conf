@@ -65,6 +65,9 @@
         pinta
         qimgv
         ueberzugpp
+
+        conda
+        xorg.xhost
     ];
 
     programs = {

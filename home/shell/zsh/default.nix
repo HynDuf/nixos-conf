@@ -9,6 +9,7 @@
             highlight = "fg=#585b70,underline";
         };
         syntaxHighlighting.enable = true;
+        autocd = true;
         initExtra = ''
         bindkey "^[[1;5C" forward-word
         bindkey "^[[1;5D" backward-word
@@ -42,13 +43,15 @@
                     ;;
             esac
         }
+        source ~/.conda/etc/profile.d/conda.sh
         '';
-        autocd = true;
 
         shellAliases = {
             update = "sudo nixos-rebuild switch";
             v = "nvim";
             r = "joshuto";
+            ca = "conda activate";
+            cs = "conda-shell -c zsh";
         };
         history = {
             ignoreAllDups = true;
