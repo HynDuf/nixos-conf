@@ -86,13 +86,15 @@ handle_extension() {
 
             ## PDF
         pdf)
-            ## Preview as text conversion
-            pdftotext -l 10 -nopgbrk -q -- "${FILE_PATH}" - | \
-                fmt -w "${PREVIEW_WIDTH}" && exit 0
-            mutool draw -F txt -i -- "${FILE_PATH}" 1-10 | \
-                fmt -w "${PREVIEW_WIDTH}" && exit 0
-            exiftool "${FILE_PATH}" && exit 0
-            exit 1 ;;
+        #     ## Preview as text conversion
+        #     pdftotext -l 10 -nopgbrk -q -- "${FILE_PATH}" - | \
+        #         fmt -w "${PREVIEW_WIDTH}" && exit 0
+        #     mutool draw -F txt -i -- "${FILE_PATH}" 1-10 | \
+        #         fmt -w "${PREVIEW_WIDTH}" && exit 0
+            # exiftool "${FILE_PATH}" && exit 0
+            # exit 1 ;;
+            # disable text preview for pdf (already have image preview)
+            exit 0 ;;
 
             ## BitTorrent
         torrent)
@@ -198,8 +200,9 @@ handle_mime() {
             ## Image
         image/*)
             ## Preview as text conversion
-            exiftool "${FILE_PATH}" && exit 0
-            exit 1 ;;
+            # exiftool "${FILE_PATH}" && exit 0
+            # exit 1 ;;
+            exit 0 ;;
 
             ## Video and audio
         video/* | audio/*)

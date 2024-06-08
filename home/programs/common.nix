@@ -11,6 +11,7 @@
         xz
         unzip
         p7zip
+        rar
 
         # utils
         ripgrep # recursively searches directories for a regex pattern
@@ -50,9 +51,20 @@
 
         gcc
         telegram-desktop
-        xpdf
         xlsx2csv
+        atool
+        exiftool
+        inkscape
+        pandoc
         mpv
+        jq
+        libreoffice-qt
+        poppler_utils
+
+        anki-bin
+        pinta
+        qimgv
+        ueberzugpp
     ];
 
     programs = {

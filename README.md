@@ -6,6 +6,7 @@ WIP
 
 <div align="center">
 <img src=".github/screenshots/showcase-simple.png" alt="simple">
+</div>
 
 ## Credits
 

@@ -39,8 +39,11 @@ directories_first = true
 reverse = false
 
 [preview]
-max_preview_size = 20971520                           # 20MB
+preview_protocol = "disabled"
+max_preview_size = 52428800                           # 50MB
 preview_script = "~/.config/joshuto/preview_file.sh" # make sure it's marked as executable
+preview_shown_hook_script = "~/.config/joshuto/on_pdf_preview_shown"
+preview_removed_hook_script = "~/.config/joshuto/on_pdf_preview_removed"
 
 [search]
 # insensitive, sensitive, smart

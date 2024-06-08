@@ -10,16 +10,19 @@
         };
         syntaxHighlighting.enable = true;
         initExtra = ''
-        zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
         bindkey "^[[1;5C" forward-word
         bindkey "^[[1;5D" backward-word
+        zstyle ':completion:*' matcher-list ''' \
+        'm:{a-z\-}={A-Z\_}' \
+        'r:[^[:alpha:]]||[[:alpha:]]=** r:|=* m:{a-z\-}={A-Z\_}' \
+        'r:|?=** m:{a-z\-}={A-Z\_}'
         eval "$(direnv hook zsh)"
 
         function joshuto() {
             ID="$$"
             mkdir -p /tmp/$USER
             OUTPUT_FILE="/tmp/$USER/joshuto-cwd-$ID"
-            env joshuto --output-file "$OUTPUT_FILE" $@
+            env ~/bin/joshuto_ueberzugpp --output-file "$OUTPUT_FILE" $@
             exit_code=$?
 
             case "$exit_code" in
@@ -41,7 +44,6 @@
         }
         '';
         autocd = true;
-        defaultKeymap = "emacs";
 
         shellAliases = {
             update = "sudo nixos-rebuild switch";
@@ -52,6 +54,5 @@
             ignoreAllDups = true;
             size = 100000;
         };
-
     };
 }

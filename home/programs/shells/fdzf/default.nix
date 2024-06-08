@@ -3,7 +3,7 @@
     programs.fzf = {
         enable = true;
 
-        changeDirWidgetCommand = "fd --type d";
+        changeDirWidgetCommand = "fd --type d --hidden";
         changeDirWidgetOptions = [
             "--preview 'eza --tree --icons --color=always {} | head -200'"
         ];
