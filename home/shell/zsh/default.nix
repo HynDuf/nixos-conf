@@ -43,13 +43,21 @@
                     ;;
             esac
         }
+        # conda on zsh
         source ~/.conda/etc/profile.d/conda.sh
+
+        # somehow bluetooth failed without this
+        dbus-update-activation-environment DISPLAY
         '';
 
         shellAliases = {
             update = "sudo nixos-rebuild switch";
             v = "nvim";
             r = "joshuto";
+            g = "git";
+            gaa = "git add .";
+            gcm = "git commit -m";
+            gp = "git push";
             ca = "conda activate";
             cs = "conda-shell -c zsh";
         };
