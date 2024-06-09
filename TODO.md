@@ -1,6 +1,4 @@
 - [ ] Neovim Config (consider a nixvim configurations)
-- [ ] Better Discord + Theme
-- [ ] Espanso for Obsidian
 - [ ] Some kind of alternative of neofetch
 - [ ] Find a better alternative to `grep` for better searching (maybe with highlighting too)
 - [ ] Write Firefox custom css guide

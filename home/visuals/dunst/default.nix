@@ -31,7 +31,7 @@
                 frame_color = "#4A5057";
                 separator_color = "frame";
                 sort = "yes";
-                font = "JetBrains Mono Nerd Font Medium 12";
+                font = "JetBrains Mono Nerd Font Medium 11";
                 line_height = 1;
                 markup = "full";
                 format = "<b>%a</b>\\n%s\\n%b";
