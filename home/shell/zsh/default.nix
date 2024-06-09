@@ -8,7 +8,16 @@
             enable = true;
             highlight = "fg=#585b70,underline";
         };
-        syntaxHighlighting.enable = true;
+        syntaxHighlighting = {
+            enable = true;
+            highlighters = [ "brackets" "main" ];
+            styles = {
+                default = "fg=#f2cdcd";
+                path = "fg=#cba6f7";
+                alias = "fg=#89b4fa,bold";
+                assign = "fg=#f5c2e7,bold";
+            };
+        };
         autocd = true;
         defaultKeymap = "emacs";
         initExtra = ''
@@ -18,6 +27,7 @@
         'm:{a-z\-}={A-Z\_}' \
         'r:[^[:alpha:]]||[[:alpha:]]=** r:|=* m:{a-z\-}={A-Z\_}' \
         'r:|?=** m:{a-z\-}={A-Z\_}'
+        zstyle ':completion:*' menu select
         eval "$(direnv hook zsh)"
 
         function joshuto() {
