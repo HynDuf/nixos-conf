@@ -1,6 +1,6 @@
 add_newline = true
 
-format = '''[╭─](#cba6f7) 🌸 $username$hostname$directory$git_branch$git_commit$git_state$git_status$jobs$cmd_duration$python
+format = '''[╭─](#cba6f7) 🌸 $username$hostname$directory$git_branch$git_commit$git_state$git_status$jobs$cmd_duration$python$conda$nodejs
 [╰─](#cba6f7) $character'''
 
 # right_format = '$time'
@@ -59,17 +59,24 @@ disabled = false
 format = '[$duration]($style) '
 style = 'bright-blue'
 
-[time]
-disabled = false
-use_12hr = true
-format = '[$time]($style) 🕙'
-style = '#00ffc3'
-
 [jobs]
 disabled = false
 style = 'bright-green bold'
 
 [python]
 disabled = false
-format = '[\(${virtualenv}\)]($style)'
+symbol = '󰌠 '
+format = '[\[${symbol}\(${virtualenv}\)\]]($style)'
+style = 'yellow bold'
+
+[conda]
+disabled = false
+symbol = '󰯲 '
+format = '[\[${symbol}\(${environment}\)\]]($style)'
+style = 'bold fg:#a6e3a1'
+
+[nodejs]
+disabled = false
+symbol = ' '
+format = '[\[${symbol}\(${environment}\)\]]($style)'
 style = 'yellow bold'
