@@ -69,6 +69,8 @@
         xorg.xhost
         qalculate-gtk
         vesktop
+        simplescreenrecorder
+        screenkey
     ];
 
     programs = {

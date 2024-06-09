@@ -2,7 +2,5 @@
 {
     programs.neovim = {
         enable = true;
-
-
     };
 }

@@ -1,4 +1,3 @@
-- [ ] Enable Bluetooth
 - [ ] Neovim Config (consider a nixvim configurations)
 - [ ] Better Discord + Theme
 - [ ] Espanso for Obsidian
