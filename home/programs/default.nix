@@ -12,5 +12,6 @@
 
         ./spectacle
         ./redshift
+        ./vencord
     ];
 }

@@ -39,7 +39,6 @@
 
         # app
         obsidian
-        discord
         zotero
 
         # monitor
@@ -69,6 +68,7 @@
         conda
         xorg.xhost
         qalculate-gtk
+        vesktop
     ];
 
     programs = {
