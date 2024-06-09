@@ -213,11 +213,10 @@ in {
         # libs
         bc
         libgcc
-        python312
-        python312Packages.pip
         go
 
         libnotify
+        amdgpu_top
     ];
 
     # Enable CUPS to print documents.
