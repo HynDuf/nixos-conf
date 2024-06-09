@@ -68,6 +68,7 @@
 
         conda
         xorg.xhost
+        qalculate-gtk
     ];
 
     programs = {

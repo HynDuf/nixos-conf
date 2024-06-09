@@ -8,15 +8,15 @@ showMagnifier=ShowMagnifierAlways
 
 [ImageSave]
 imageFilenameTemplate=screenshot_<dd>.<MM>.<yyyy>_<h>.<mm>.<ss> <A>
-imageSaveLocation=file:///home/Pictures/screenshot
+imageSaveLocation=file:///home/hynduf/Pictures/screenshots
 translatedScreenshotsFolder=Screenshots
 
 [Save]
-defaultSaveLocation=file:///home/Pictures/screenshot
+defaultSaveLocation=file:///home/hynduf/Pictures/screenshots
 saveFilenameFormat=Screenshot_%D.%M.%Y_%H.%m.%S
 
 [VideoSave]
 preferredVideoFormat=0
 translatedScreencastsFolder=screencasts
 videoFilenameTemplate=screencast_<dd>.<MM>.<yyyy>_<h>.<mm>.<ss> <A>
-videoSaveLocation=file:///home/Pictures/screenshot
+videoSaveLocation=file:///home/hynduf/Pictures/screenshots

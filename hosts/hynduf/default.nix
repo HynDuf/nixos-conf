@@ -26,7 +26,7 @@
 
             configurationLimit = 10;
 
-            splashImage = /home/hynduf/Pictures/hollow-knight.png;
+            splashImage = ../../home/images/wallpapers/hollow-knight.png;
         };
     };
 

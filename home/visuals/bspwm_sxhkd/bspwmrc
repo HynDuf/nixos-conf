@@ -1,5 +1,8 @@
 #!usr/bin/env bash
 
+wallpaper_path=~/Pictures/wallpapers
+img="$(ls $wallpaper_path | shuf -n 1)"
+
 pgrep -x sxhkd > /dev/null || sxhkd &
 
 xsetroot -cursor_name left_ptr &
@@ -10,7 +13,8 @@ setxkbmap -option caps:swapescape &
 dunst &
 "$HOME/bin/launch.sh" &
 picom &
-feh --bg-fill ~/Pictures/jelly-astronaut.jpg &
+feh --bg-fill "$wallpaper_path/$img" &
+# feh --bg-fill ~/Pictures/jelly-astronaut.jpg &
 ibus-daemon -drxR &
 nm-applet &
 pgrep -x battery-alert >/dev/null || ~/bin/battery-alert &

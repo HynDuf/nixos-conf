@@ -175,15 +175,11 @@ in {
     # $ nix search wget
     environment.systemPackages = with pkgs; [
         vim
-        neovim
-        kitty
         curl
         git
         sysstat
         lm_sensors # for `sensors` command
         fastfetch
-        joshuto # terminal file manager
-        zathura # pdf viewer
 
         # network
         networkmanagerapplet
@@ -191,7 +187,6 @@ in {
         # audio
         # pipewire
         libpulseaudio
-        noisetorch
 
         # display
         brightnessctl
@@ -199,11 +194,6 @@ in {
         # for customization
         bsp-layout
         sxhkd
-        qalculate-gtk
-        eww
-        dunst
-        picom
-        polybar
         i3lock-color
 
         # utils

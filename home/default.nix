@@ -27,7 +27,7 @@
         };
 
         file."Pictures" = {
-            source = ./wallpapers;
+            source = ./images;
 
             recursive = true;
         };
