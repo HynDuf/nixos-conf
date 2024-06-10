@@ -13,5 +13,9 @@
             name = "JetBrainsMono Nerd Font";
             size = 11;
         };
+        iconTheme = {
+            name = "Papirus";
+            package = pkgs.papirus-icon-theme;
+        };
     };
 }
