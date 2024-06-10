@@ -54,6 +54,11 @@
                     ;;
             esac
         }
+        erdtree_level() {
+            local level="$1"
+            shift
+            erd -H -I -i -. --no-git -L "$level" "$@"
+        }
         # conda on zsh
         source ~/.conda/etc/profile.d/conda.sh
 
@@ -71,6 +76,7 @@
             gp = "git push";
             ca = "conda activate";
             cs = "conda-shell -c zsh";
+            e = "erdtree_level";
         };
         history = {
             ignoreAllDups = true;

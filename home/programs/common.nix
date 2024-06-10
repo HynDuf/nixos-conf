@@ -71,6 +71,9 @@
         vesktop
         simplescreenrecorder
         screenkey
+        erdtree
+        dust
+        duf
     ];
 
     programs = {
