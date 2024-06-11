@@ -2,7 +2,7 @@
 {
     imports = [
         ./kitty
-        ./zsh
+        ./fish
         ./starship
     ];
 
