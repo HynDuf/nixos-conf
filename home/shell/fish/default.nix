@@ -3,10 +3,11 @@
     programs.fish = {
         enable = true;
         shellInit = ''
+        set -g fish_greeting
         eval (direnv hook fish)
         eval (ssh-agent -c) &>/dev/null
         function joshuto
-            set -l ID (echo $$)
+            set -l ID $fish_pid
             mkdir -p /tmp/$USER
             set -l OUTPUT_FILE "/tmp/$USER/joshuto-cwd-$ID"
             env ~/bin/joshuto_ueberzugpp --output-file "$OUTPUT_FILE" $argv
@@ -33,7 +34,10 @@
             set argv (string trim -l 1 $argv)
             erd -H -I -i -. --no-git -L "$level" $argv
         end
-
+        '';
+        shellInitLast = ''
+        source ~/.conda/etc/fish/conf.d/conda.fish
+        dbus-update-activation-environment DISPLAY
         '';
         shellAliases = {
             update = "sudo nixos-rebuild switch";
@@ -52,5 +56,8 @@
     };
     xdg.configFile."fish/fish_variables" = {
         source = ./fish_variables;
+    };
+    xdg.configFile."fish/themes" = {
+        source = ./themes;
     };
 }

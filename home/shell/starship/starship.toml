@@ -24,7 +24,7 @@ style_root = 'bold fg:#f38ba8'
 [hostname]
 format = '@[$hostname]($style) '
 disabled = false
-style = 'bold blue'
+style = 'bold fg:#89b4fa'
 ssh_only = false
 
 [git_branch]
