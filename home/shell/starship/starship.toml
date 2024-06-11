@@ -3,11 +3,9 @@ add_newline = true
 format = '''[╭─](#cba6f7) 🌸 $username$hostname$directory$git_branch$git_commit$git_state$git_status$jobs$cmd_duration$python$conda$nodejs
 [╰─](#cba6f7) $character'''
 
-# right_format = '$time'
-
 [character]
-success_symbol = '[➾](bold green)'
-error_symbol = '[➾](bold red)'
+success_symbol = '[ ](bold green)'
+error_symbol = '[ ](bold red)'
 
 [shell]
 disabled = false

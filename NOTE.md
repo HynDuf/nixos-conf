@@ -1,5 +1,7 @@
 ## Setup SSH
 WIP
+## Custom fonts
+Remember to `fc-cache -fc`. It seems that NixOS rebuild only run `fc-cache` so it might miss your custom fonts.
 ## Find nerd fonts
 Search for the name of the nerd font (to install with NixOS):
 [https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts](https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts).
