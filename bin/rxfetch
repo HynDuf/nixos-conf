@@ -71,7 +71,7 @@ get_pkg_count() {
 				 fi
 				 ;;
 			pacman) pacman -Q | wc -l ;;
-			nix) nix-env -qa --installed '*' | wc -l ;;
+			nix) ls /run/current-system/sw/bin/ | wc -l ;;
 			dnf) dnf list installed | wc -l ;;
 			rpm) rpm -qa | wc -l ;;
 			emerge) qlist -I | wc -l ;;
