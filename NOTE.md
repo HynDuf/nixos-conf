@@ -1,3 +1,5 @@
+## zsh to fish
+I have migrated to `fish`. If you want to use `zsh` with nearly the same functionalities as `fish` check my migration commit [here](https://github.com/HynDuf/nixos-conf/commit/7af7e76aea6e53e6ed0588de907b4ca8194097c7) and [here](https://github.com/HynDuf/nixos-conf/commit/ae4becb6399cc677bbca9f4c61f8cd87b21ebfdb). 
 ## Setup SSH
 WIP
 ## Custom fonts

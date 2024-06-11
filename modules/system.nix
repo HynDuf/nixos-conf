@@ -163,7 +163,6 @@ in {
         git
         sysstat
         lm_sensors # for `sensors` command
-        fastfetch
 
         # network
         networkmanagerapplet
