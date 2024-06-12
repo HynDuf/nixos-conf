@@ -55,23 +55,6 @@
         driSupport32Bit = true;
     };
 
-    boot.extraModprobeConfig = ''
-        blacklist nouveau
-        options nouveau modeset=0
-    '';
-    
-    services.udev.extraRules = ''
-        # Remove NVIDIA USB xHCI Host Controller devices, if present
-        ACTION=="add", SUBSYSTEM=="pci", ATTR{vendor}=="0x10de", ATTR{class}=="0x0c0330", ATTR{power/control}="auto", ATTR{remove}="1"
-        # Remove NVIDIA USB Type-C UCSI devices, if present
-        ACTION=="add", SUBSYSTEM=="pci", ATTR{vendor}=="0x10de", ATTR{class}=="0x0c8000", ATTR{power/control}="auto", ATTR{remove}="1"
-        # Remove NVIDIA Audio devices, if present
-        ACTION=="add", SUBSYSTEM=="pci", ATTR{vendor}=="0x10de", ATTR{class}=="0x040300", ATTR{power/control}="auto", ATTR{remove}="1"
-        # Remove NVIDIA VGA/3D controller devices
-        ACTION=="add", SUBSYSTEM=="pci", ATTR{vendor}=="0x10de", ATTR{class}=="0x03[0-9]*", ATTR{power/control}="auto", ATTR{remove}="1"
-    '';
-    boot.blacklistedKernelModules = [ "nouveau" "nvidia" "nvidia_drm" "nvidia_modeset" ];
-
     # This value determines the NixOS release from which the default
     # settings for stateful data, like file locations and database versions
     # on your system were taken. It‘s perfectly fine and recommended to leave
