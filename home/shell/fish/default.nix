@@ -29,11 +29,6 @@
             end
         end
 
-        function erdtree_level
-            set -l level "$argv[1]"
-            set argv (string trim -l 1 $argv)
-            erd -H -I -i -. --no-git -L "$level" $argv
-        end
         set -x GTK_IM_MODULE ibus
         set -x QT_IM_MODULE ibus
         set -x XMODIFIERS @im=ibus

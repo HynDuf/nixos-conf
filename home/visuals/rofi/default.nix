@@ -5,9 +5,10 @@
         plugins = [
             pkgs.rofi-emoji
         ];
+        configPath = "./config.rasi";
     };
 
-    xdg.configFile."rofi" = {
+    xdg.configFile.rofi = {
         source = ./config;
         recursive = true;
     };

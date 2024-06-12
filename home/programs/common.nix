@@ -71,9 +71,11 @@
         vesktop
         simplescreenrecorder
         screenkey
-        erdtree
-        dust
+        dua
+        navi
         duf
+        ffmpeg
+        microsoft-edge
     ];
 
     programs = {
