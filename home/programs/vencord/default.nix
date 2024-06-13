@@ -1,7 +1,7 @@
 { pkgs, config, ... }:
 {
     xdg.configFile."vesktop/themes/midnight-catppuccin-mocha.css".text = ''
-/**
+	/**
  * @name midnight (catppuccin mocha)
  * @description A dark, rounded discord theme. Based on catppuccin mocha theme (https://github.com/catppuccin/catppuccin).
  * @author refact0r
@@ -17,13 +17,13 @@
 
 @import url('https://refact0r.github.io/midnight-discord/midnight.css');
 
-/* customize things here */
 .container_debb33 /* user panel button strikethroughs */,
-.numberBadge__40d6f /* unread number badge */,
+.numberBadge_c1210c  /* unread number badge */,
 .toolbar__62fb5 /* toolbar button strikethroughs */ {
 	--status-danger: #e34973;
-	# --status-danger: var(--accent-2);
+	/* --status-danger: var(--accent-2); */
 }
+/* customize things here */
 :root {
 	/* font, change to 'gg sans' for default discord font*/
 	--font: 'figtree';
@@ -96,12 +96,10 @@
 }
 
 /* catppuccin icon */
-.childWrapper_a6ce15:has(> svg:not(.favoriteIcon_adf80e)) {
+.childWrapper__760c6:has(> svg:not(.favoriteIcon_adf80e)) {
 	background: url('https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/logos/exports/1544x1544_circle.png');
 	background-color: transparent !important;
 	background-size: cover;
 }
-
-
     '';
 }

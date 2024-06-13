@@ -1,90 +1,95 @@
-{ config, pkgs, libs, ... }:
-
 {
-    # Packages that should be installed to the user profile.
-    home.packages = with pkgs; [
-        # here is some command line tools I use frequently
-        # feel free to add your own or remove some of them
+  config,
+  pkgs,
+  libs,
+  ...
+}: {
+  # Packages that should be installed to the user profile.
+  home.packages = with pkgs; [
+    # here is some command line tools I use frequently
+    # feel free to add your own or remove some of them
 
-        # archives
-        zip
-        xz
-        unzip
-        p7zip
-        rar
+    # archives
+    zip
+    xz
+    unzip
+    p7zip
+    rar
 
-        # utils
-        ripgrep # recursively searches directories for a regex pattern
-        eza # A modern replacement for ‘ls’
-        fzf # A command-line fuzzy finder
-        fd
-        bat # A "cat" drop-in replacement
+    # utils
+    ripgrep # recursively searches directories for a regex pattern
+    eza # A modern replacement for ‘ls’
+    fzf # A command-line fuzzy finder
+    fd
+    bat # A "cat" drop-in replacement
 
-        # misc
-        file
-        which
-        tree
-        lshw
-        trash-cli
+    # misc
+    file
+    which
+    tree
+    lshw
+    trash-cli
 
-        # misc ui
-        kdePackages.spectacle
-        catppuccin-gtk
-        pavucontrol
+    # misc ui
+    kdePackages.spectacle
+    catppuccin-gtk
+    pavucontrol
 
-        imagemagick
-        xclip
-        maim
-        syncthing
+    imagemagick
+    xclip
+    maim
+    syncthing
 
-        # app
-        obsidian
-        zotero
+    # app
+    obsidian
+    zotero
 
-        # monitor
-        btop 
+    # monitor
+    btop
 
-        # system tools
-        pciutils # lspci
-        usbutils # lsusb
+    # system tools
+    pciutils # lspci
+    usbutils # lsusb
 
-        gcc
-        telegram-desktop
-        xlsx2csv
-        atool
-        exiftool
-        inkscape
-        pandoc
-        mpv
-        jq
-        libreoffice-qt
-        poppler_utils
+    gcc
+    cmake
+    telegram-desktop
+    xlsx2csv
+    atool
+    exiftool
+    inkscape
+    pandoc
+    mpv
+    jq
+    libreoffice-qt
+    poppler_utils
 
-        anki-bin
-        pinta
-        qimgv
-        ueberzugpp
+    anki-bin
+    pinta
+    qimgv
+    ueberzugpp
 
-        conda
-        xorg.xhost
-        qalculate-gtk
-        vesktop
-        simplescreenrecorder
-        screenkey
-        dua
-        navi
-        duf
-        ffmpeg
-        microsoft-edge
-    ];
+    conda
+    xorg.xhost
+    qalculate-gtk
+    vesktop
+    simplescreenrecorder
+    screenkey
+    dua
+    navi
+    duf
+    ffmpeg
+    microsoft-edge
+  ];
 
-    programs = {
-        feh.enable = true; # image viewer
-        zoxide.enable = true;
-    };
+  programs = {
+    feh.enable = true; # image viewer
+    zoxide.enable = true;
+  };
 
-    services = {
-        network-manager-applet.enable = true;
-        copyq.enable = true;
-    };
+  services = {
+    network-manager-applet.enable = true;
+    copyq.enable = true;
+  };
 }
+
