@@ -1,14 +1,16 @@
-{ pkgs, config, ... }:
 {
-    programs.neovim = {
-        enable = true;
-    };
-    xdg.configFile."nvim" = {
-        source = ./config;
-        recursive = true;
-
-    };
-    home.packages = with pkgs;
+  pkgs,
+  config,
+  ...
+}: {
+  programs.neovim = {
+    enable = true;
+  };
+  xdg.configFile."nvim" = {
+    source = ./config;
+    recursive = true;
+  };
+  home.packages = with pkgs;
     [
       (writeShellScriptBin "clean-nvim" ''
         rm -rf ${config.xdg.dataHome}/nvim
@@ -44,7 +46,7 @@
       shfmt
       lua-language-server
       stylua
-      # typescript-language-server
+      nodePackages_latest.typescript-language-server
       prettierd
       vscode-langservers-extracted
 
@@ -58,3 +60,4 @@
       xclip
     ];
 }
+
