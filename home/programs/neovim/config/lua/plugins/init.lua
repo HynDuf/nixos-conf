@@ -17,9 +17,11 @@ return {
 	},
 	{
 		"goolord/alpha-nvim",
-		event = "VimEnter",
+		lazy = false,
 		dependencies = { "nvim-tree/nvim-web-devicons" },
-		config = require("configs.alpha").setup,
+		config = function()
+			require("alpha").setup(require("alpha.themes.theta").config)
+		end,
 	},
 	{
 		"rcarriga/nvim-notify",

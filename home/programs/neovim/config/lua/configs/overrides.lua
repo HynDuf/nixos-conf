@@ -80,6 +80,10 @@ M.nvimtree = {
 			},
 		},
 	},
+
+	filters = {
+		dotfiles = true,
+	},
 }
 
 M.nvimproject = {
