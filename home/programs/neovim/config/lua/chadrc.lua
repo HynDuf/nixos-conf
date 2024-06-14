@@ -2,7 +2,7 @@ local M = {}
 
 M.ui = {
 	hl_override = {
-		Visual = { bg = "#43364a" },
+		Visual = { bg = "#2a2f5c" },
 		CursorLine = { bg = "#252636", fg = "#cba6f7" },
 		CursorLineNr = { fg = "#7aa2f7" },
 
