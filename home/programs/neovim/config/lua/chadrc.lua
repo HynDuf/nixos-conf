@@ -5,7 +5,6 @@ M.ui = {
 		Visual = { bg = "#2a2f5c" },
 		CursorLine = { bg = "#252636", fg = "#cba6f7" },
 		CursorLineNr = { fg = "#7aa2f7" },
-
 		-- alpha-nvim "neovim" color
 		Type = { fg = "#89b4fa" },
 	},
