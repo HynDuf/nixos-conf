@@ -5,7 +5,6 @@
         ./eza
         ./fdzf
         ./git_ssh
-        ./joshuto
         ./yazi
         ./direnv
     ];

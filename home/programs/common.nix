@@ -62,7 +62,9 @@
     mpv
     jq
     libreoffice-qt
-    poppler_utils
+    poppler
+    ffmpegthumbnailer
+    unar
 
     anki-bin
     pinta
