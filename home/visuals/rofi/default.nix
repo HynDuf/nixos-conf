@@ -5,7 +5,6 @@
         plugins = [
             pkgs.rofi-emoji
         ];
-        configPath = "./config.rasi";
     };
 
     xdg.configFile.rofi = {

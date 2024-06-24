@@ -10,7 +10,7 @@
             tweaks = [ "rimless" ];
         };
         font = {
-            name = "JetBrainsMono Nerd Font";
+            name = "MonoLisa";
             size = 11;
         };
         iconTheme = {
