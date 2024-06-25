@@ -1,0 +1,89 @@
+{
+ 	"editor.fontFamily": "'MonoLisa'",
+	"terminal.integrated.fontFamily": "'MonoLisa'",
+	"editor.fontLigatures": "'feat','ures'",
+	"editor.fontWeight": "normal",
+	"editor.fontSize": 15,
+	"terminal.integrated.fontSize": 15,
+	"editor.tokenColorCustomizations": {
+		"textMateRules": [
+			{
+				"scope": "comment",
+				"settings": {
+					"fontStyle": "italic"
+				}
+			}
+		]
+	},
+
+	"code-runner.executorMap": {
+		"cpp": "cd $dir && clang++ -Wall -Wextra -std=c++17 -DHynDuf -O2 -Wshadow -Wformat=2 -Wfloat-equal $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt"
+	},
+	"code-runner.runInTerminal": true,
+	"code-runner.saveAllFilesBeforeRun": true,
+	"workbench.colorCustomizations": {
+		"editorOverviewRuler.background": "#1a1b26",
+		"editor.selectionBackground": "#135564",
+		"editor.selectionHighlightBackground": "#135564"
+	},
+	"editor.minimap.renderCharacters": false,
+	"editor.smoothScrolling": true,
+	"editor.scrollbar.verticalScrollbarSize": 13,
+	"git.ignoreLegacyWarning": true,
+	"gitlens.advanced.messages": {
+		"suppressGitVersionWarning": true
+	},
+	"[python]": {
+		"editor.defaultFormatter": "ms-python.python",
+		"editor.formatOnType": true
+	},
+	"vim.enableNeovim": true,
+    "[jsonc]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"remote.SSH.remotePlatform": {
+		"uet-hpc.remote.hpc.farm": "linux"
+	},
+	"cmake.configureOnOpen": false,
+	"settingsSync.ignoredSettings": [
+		"editor.fontFamily"
+	],
+	"cph.general.firstTime": false,
+	"cph.general.timeOut": 5000,
+	"cph.general.useShortCodeForcesName": true,
+	"cph.general.menuChoices": "cpp",
+	"cph.general.autoShowJudge": false,
+	"extensions.ignoreRecommendations": true,
+	"code-runner.executorMapByGlob": {
+		"*.s": "cd $dir && as --32 $fileName -o $fileNameWithoutExt.o && ld $fileNameWithoutExt.o -o $fileNameWithoutExt -melf_i386 && ./$fileNameWithoutExt"
+	},
+	"[javascript]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"git.openRepositoryInParentFolders": "never",
+	"dart.flutterSdkPath": "/home/hynduf/apps/flutter",
+	"vim.useSystemClipboard": true,
+	"vim.handleKeys": {
+		"<C-a>": false,
+		"<C-f>": false,
+		"<C-c>": false,
+		"<C-x>": false,
+		"<C-j>": false
+	},
+	"keyboard.dispatch": "keyCode",
+	"C_Cpp.intelliSenseEngine": "disabled",
+	"cph.language.cpp.Args": "-std=c++17 -DHynDuf",
+	"editor.stickyScroll.maxLineCount": 2,
+	"editor.stickyScroll.enabled": true,
+	"editor.stickyScroll.defaultModel": "indentationModel",
+	"cmake.showOptionsMovedNotification": false,
+	"[json]": {
+		"editor.defaultFormatter": "vscode.json-language-features"
+	},
+	"terminal.integrated.enableMultiLinePasteWarning": false,
+	"workbench.colorTheme": "Tokyo Night AltSynt",
+	"editor.inlayHints.enabled": "off",
+	"clangd.onConfigChanged": "restart",
+	"clangd.arguments": ["-header-insertion=never"],
+	"window.restoreWindows": "none",
+}
