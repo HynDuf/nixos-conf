@@ -12,7 +12,7 @@ find_position = { fg = "#f5c2e7", bg = "reset", italic = true }
 # Marker
 marker_copied   = { fg = "#a6e3a1", bg = "#a6e3a1" }
 marker_cut      = { fg = "#f38ba8", bg = "#f38ba8" }
-marker_selected = { fg = "#cba6f7", bg = "#cba6f7" }
+marker_selected = { fg = "#fab387", bg = "#fab387" }
 
 # Tab
 tab_active   = { fg = "#1e1e2e", bg = "#cdd6f4" }
@@ -102,6 +102,9 @@ rules = [
 	{ mime = "application/x-bzip2",         fg = "#f5c2e7" },
 	{ mime = "application/x-7z-compressed", fg = "#f5c2e7" },
 	{ mime = "application/x-rar",           fg = "#f5c2e7" },
+
+    # Documents
+	{ mime = "application/{pdf,doc,rtf,vnd.*}", fg = "#cba6f7" },
 
 	# Fallback
 	{ name = "*", fg = "#cdd6f4" },
@@ -318,8 +321,6 @@ prepend_rules = [
 	{ name = "*.desktop", text = "", fg = "#45475a" },
 	{ name = "*.diff", text = "", fg = "#45475a" },
 	{ name = "*.dll", text = "", fg = "#11111b" },
-	{ name = "*.doc", text = "󰈬", fg = "#585b70" },
-	{ name = "*.docx", text = "󰈬", fg = "#585b70" },
 	{ name = "*.dot", text = "󱁉", fg = "#585b70" },
 	{ name = "*.download", text = "", fg = "#94e2d5" },
 	{ name = "*.drl", text = "", fg = "#eba0ac" },
@@ -417,8 +418,6 @@ prepend_rules = [
 	{ name = "*.ixx", text = "", fg = "#74c7ec" },
 	{ name = "*.java", text = "", fg = "#f38ba8" },
 	{ name = "*.jl", text = "", fg = "#7f849c" },
-	{ name = "*.jpeg", text = "", fg = "#7f849c" },
-	{ name = "*.jpg", text = "", fg = "#7f849c" },
 	{ name = "*.js", text = "", fg = "#f9e2af" },
 	{ name = "*.json", text = "", fg = "#f9e2af" },
 	{ name = "*.json5", text = "", fg = "#f9e2af" },
@@ -505,13 +504,11 @@ prepend_rules = [
 	{ name = "*.patch", text = "", fg = "#45475a" },
 	{ name = "*.pck", text = "", fg = "#7f849c" },
 	{ name = "*.pcm", text = "", fg = "#6c7086" },
-	{ name = "*.pdf", text = "", fg = "#585b70" },
 	{ name = "*.php", text = "", fg = "#7f849c" },
 	{ name = "*.pl", text = "", fg = "#74c7ec" },
 	{ name = "*.pls", text = "󰲹", fg = "#f38ba8" },
 	{ name = "*.ply", text = "󰆧", fg = "#7f849c" },
 	{ name = "*.pm", text = "", fg = "#74c7ec" },
-	{ name = "*.png", text = "", fg = "#7f849c" },
 	{ name = "*.po", text = "", fg = "#74c7ec" },
 	{ name = "*.pot", text = "", fg = "#74c7ec" },
 	{ name = "*.pp", text = "", fg = "#fab387" },

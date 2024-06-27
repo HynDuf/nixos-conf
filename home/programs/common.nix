@@ -69,7 +69,6 @@
     anki-bin
     pinta
     qimgv
-    ueberzugpp
 
     conda
     xorg.xhost
