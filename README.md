@@ -11,3 +11,5 @@ WIP
 ## Credits
 
 This wouldn't be possible without the help of [Aqu4holic](https://github.com/aqu4holic) with [his NixOS configs](https://github.com/aqu4holic/yuki)
+
+- [thuvasooriya](https://github.com/thuvasooriya) for his great neovim nvchad config.

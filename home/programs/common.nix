@@ -81,6 +81,7 @@
     duf
     ffmpeg
     microsoft-edge
+    python3
   ];
 
   programs = {

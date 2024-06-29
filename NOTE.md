@@ -13,8 +13,16 @@ Then, use the name on the URL to install it with NixOS.
 Additional Links:
 - [https://github.com/ryanoasis/nerd-fonts](https://github.com/ryanoasis/nerd-fonts/)
 
-## Firefox Custom `chrome` CSS
+## Firefox 
+
+### Custom `chrome` CSS
+
+### Correct PDF font 
+Set `browser.display.use_document_fonts` to `0`.
 
 ## Add `copyq` shortcuts for "Show the tray menu" as Super + Shift + V
 
 The old way of using `sxhkd` to map `copyq menu` to Super + Shift + V is deprecated. As it doesn't work properly on my NixOS anymore.
+
+## Reload nvchad highlight overrides 
+Open `:Lazy` and rebuild (`gb`) `base46` plugin
