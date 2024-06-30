@@ -1,6 +1,13 @@
 local overrides = require("configs.overrides")
 
 return {
+	-- --------------------
+	-- disabled plugins (in nvchad)
+	-- --------------------
+	{
+		"williamboman/mason.nvim",
+		enabled = false,
+	},
 
 	-- --------------------
 	-- ui stuff

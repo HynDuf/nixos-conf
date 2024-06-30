@@ -13,5 +13,6 @@
         ./redshift
         ./vencord
         ./espanso
+        ./lsp
     ];
 }
