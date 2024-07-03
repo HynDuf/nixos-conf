@@ -82,6 +82,8 @@
     ffmpeg
     microsoft-edge
     python3
+    playerctl
+    pamixer
   ];
 
   programs = {

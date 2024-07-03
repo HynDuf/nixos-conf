@@ -1,9 +1,8 @@
-; widgets
+;; Calendar Widgets ;;
 
 (defpoll time0 :interval "10s"  "date '+%H':%M")
 (defpoll date :interval "10s"  "date '+%b %d'")
 
-;; Calendar Widgets ;;
 (defwidget cal []
 	(box :class "cal-box" 
 		 :orientation "v"

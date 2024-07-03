@@ -1,50 +1,16 @@
 * {
     all: unset;
-    color: #cdd6f4;
-}
-
-/* Calendar */
-
-.cal-box {
-    background-color: #181825;
-    border-radius: 8px;
     font-family: JetBrainsMono Nerd Font;
-    font-size: 1.2em;
-
-    .cal-inner-box {
-        padding: 1rem 1rem .3rem 1rem;
-
-        .cal {
-            &.highlight {
-                padding: 10rem;
-            }
-
-            padding: .8rem .25rem 0rem;
-            margin-left: 10px;
-        }
-    }
 }
 
-calendar:selected {
-    color: #9ece6a;
-}
+@import "scss/colors.scss";
+@import "scss/lib.scss";
 
-calendar.header {
-    color: #ad8ee6;
-    font-weight: bold;
-}
-
-calendar.button {
-    color: #449dab;
-}
-
-calendar.highlight {
-    color: #7aa2f7;
-    font-weight: bold;
-}
-
-calendar:indeterminate {
-    color: #8C8C8C;
-}
-
-
+@import "scss/calendar.scss";
+@import "scss/control_center.scss";
+@import "scss/music.scss";
+@import "scss/notifications.scss";
+@import "scss/notifications_popup.scss";
+@import "scss/quick_settings.scss";
+@import "scss/user.scss";
+@import "scss/volume.scss";

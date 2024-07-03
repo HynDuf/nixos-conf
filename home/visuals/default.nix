@@ -7,7 +7,6 @@
         ./polybar
         ./picom
         ./gtk
-        ./dunst
         ./eww
     ];
 }

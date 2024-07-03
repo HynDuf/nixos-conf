@@ -1,0 +1,69 @@
+.music {
+    @include window;
+    padding-bottom: 0.6rem;
+    padding-top: 1.5rem;
+}
+
+.music-image {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 6rem;
+    min-width: 6rem;
+    border-radius: 1rem;
+}
+
+.music-text {
+    margin-left: 1.2rem;
+    margin-right: 0;
+}
+
+.music-title {
+    font-size: 1.2rem;
+    margin-bottom: 0.8rem;
+}
+
+.music-artist {
+    color: $onSurfaceVariant;
+}
+
+.music-name {
+    background-color: $primary;
+    color: $surface;
+    padding: 0.25rem 0.5rem;
+    border-radius: 1rem;
+    font-size: 1rem;
+    margin: 0;
+}
+
+.music-action-box {
+  margin-bottom: 0;
+}
+
+.music-action {
+    font-size: 2rem;
+    min-width: 3rem;
+    margin-bottom: 0;
+}
+
+.music-scale {
+    margin-top: 1rem;
+}
+
+.music-scale trough {
+    background-color: $surfaceVariant;
+    border-radius: 1rem;
+    min-height: 0.5rem;
+}
+
+
+.music-scale highlight {
+    background-color: $primary;
+    border-radius: 1rem;
+    min-height: 0.5rem;
+}
+
+.music-strtime {
+    color: $onSurfaceVariant;
+    margin-top: 0.25rem;
+}

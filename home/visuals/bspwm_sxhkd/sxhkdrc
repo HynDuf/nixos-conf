@@ -30,6 +30,10 @@ super + shift + c
 super + shift + f
     ~/bin/calendar-launcher
 
+# control center
+super + shift + x
+    ~/.config/eww/scripts/toggle_control_center.sh
+
 #
 # bspwm hotkeys
 #

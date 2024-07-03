@@ -10,7 +10,7 @@ xset r rate 330 20 &
 
 setxkbmap -option caps:swapescape &
 
-dunst &
+"$HOME/.config/eww/scripts/start.sh" &
 "$HOME/bin/launch.sh" &
 picom &
 feh --bg-fill "$wallpaper_path/$img" &

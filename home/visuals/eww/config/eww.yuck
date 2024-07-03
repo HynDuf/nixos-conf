@@ -1,13 +1,11 @@
-; includes:
-;widgets
-(include "widgets.yuck")
+(include "variables.yuck")
+(include "windows.yuck")
 
-;; Calendar Windows ;;
-
-(defwindow calendar
-	:geometry (geometry :x "-19px" 
-						:y "50px" 
-						:width "350px" 
-						:height "70px"
-						:anchor "top right")
-(cal))
+(include "modules/calendar.yuck")
+(include "modules/control_center.yuck")
+(include "modules/music.yuck")
+(include "modules/notifications.yuck")
+(include "modules/notifications_popup.yuck")
+(include "modules/quick_settings.yuck")
+(include "modules/user.yuck")
+(include "modules/volume.yuck")
