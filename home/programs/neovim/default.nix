@@ -24,6 +24,7 @@
         rm -rf ${config.xdg.configHome}/nvim
       '')
       nodejs
+      yarn
       ripgrep
       unzip
       fd
