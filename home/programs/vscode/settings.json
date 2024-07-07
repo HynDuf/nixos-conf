@@ -17,8 +17,9 @@
 	},
 
 	"code-runner.executorMap": {
-		"cpp": "cd $dir && clang++ -Wall -Wextra -std=c++17 -DHynDuf -O2 -Wshadow -Wformat=2 -Wfloat-equal $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt"
+		"cpp": "cd $dir && g++ -Wall -Wextra -std=c++17 -DHynDuf -O2 -Wshadow -Wformat=2 -Wfloat-equal $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt"
 	},
+	"code-runner.preserveFocus": false,
 	"code-runner.runInTerminal": true,
 	"code-runner.saveAllFilesBeforeRun": true,
 	"workbench.colorCustomizations": {
@@ -86,4 +87,10 @@
 	"clangd.onConfigChanged": "restart",
 	"clangd.arguments": ["-header-insertion=never"],
 	"window.restoreWindows": "none",
+	"vscode-neovim.neovimExecutablePaths.linux": "/etc/profiles/per-user/hynduf/bin/nvim",
+	"extensions.experimental.affinity": {
+		"asvetliakov.vscode-neovim": 1
+	},
+	"editor.wordWrap": "on",
+	"vscode-neovim.neovimInitVimPaths.linux": "/home/hynduf/yoru/home/programs/vscode/init.lua",
 }

@@ -1,35 +1,69 @@
-# <samp> 夜 - 🌸 Yoru 🌙 | NixOS home </samp>
+<h2 align="center"> ━━━━━━  ❖  ━━━━━━ </h2>
 
-This is a complete NixOS porting and refactoring of my beloved good-old-days [Arch Linux dotfiles](https://github.com/HynDuf/dotfiles)
-
-WIP
-
+<!-- BADGES -->
 <div align="center">
-<img src=".github/screenshots/showcase-simple.png" alt="simple">
+
+[![stars](https://img.shields.io/github/stars/HynDuf/nixos-conf?color=C9CBFF&labelColor=1A1B26&style=for-the-badge)](https://github.com/HynDuf7/dotfiles/stargazers)
+[![size](https://img.shields.io/github/repo-size/HynDuf/nixos-conf?color=9ece6a&labelColor=1A1B26&style=for-the-badge)](https://github.com/HynDuf7/dotfiles)
+[![license](https://img.shields.io/github/license/HynDuf/nixos-conf?color=FCA2AA&labelColor=1A1B26&style=for-the-badge)](https://github.com/HynDuf/nixos-conf/blob/main/LICENSE.md)
+
 </div>
 
-## :pencil: <samp>Table of contents</samp>
+# <samp> 夜 - 🌸 Yoru 🌙 | NixOS home </samp>
 
-- [:herb: <samp>About</samp>](#about)
-- [:camera: <samp>Showcase</samp>](#showcase)
-- [:wrench: <samp>Set up</samp>](#setup)
-- [:tada: <samp>Credits</samp>](#credits)
+This is a complete NixOS porting and refactoring of my beloved good-old-days [Arch Linux dotfiles](https://github.com/HynDuf/dotfiles).
 
 <a name="about"/>
 
 ## :herb: <samp>About</samp>
 
-<a name="showcase"/>
+<div style="flex:1;padding: 11px 60px 0px 10px">
+<img src=".github/screenshots/showcase-about.png" alt="Rice Showcase" align="right" width="300px">
+</div>
 
-## :camera: <samp>Showcase</samp>
+Here are some information about my setup:
+
+- OS: [`NixOS`](https://nixos.org/)
+- Window Manager: [`bspwm`](https://github.com/baskerville/bspwm)
+- Compositor: [`picom`](https://github.com/pijulius/picom)
+- Terminal: [`kitty`](https://github.com/kovidgoyal/kitty)
+- Shell: [`fish`](https://fishshell.com/)
+- Editor: [`neovim`](https://github.com/neovim/neovim) ([`nvchad`](https://nvchad.github.io/))
+- Panel: [`polybar`](https://github.com/polybar/polybar)
+- Widgets: [`eww`](https://github.com/elkowar/eww)
+- Application Launcher: [`rofi`](https://github.com/davatorium/rofi)
+- File Manager: [`yazi`](https://github.com/sxyazi/yazi)
 
 <a name="setup"/>
 
 ## :wrench: <samp>Set up</samp>
+- See [SETUP GUIDES]().
+
+<a name="how-to-use"/>
+
+## 🌛 <samp>How to use</samp>
+- See [USAGE GUIDES]().
+
+<a name="showcase"/>
+
+## 🌸 <samp>Showcase</samp>
+
+<details>
+<summary>
+Screenshots 
+</summary>
+<div align="center">
+<img src=".github/screenshots/showcase-simple-1.png" alt="simple-1">
+</div>
+<div align="center">
+<img src=".github/screenshots/showcase-simple-2.png" alt="simple-2">
+</div>
+
+</details>
 
 <a name="credits"/>
 
 ## :tada: <samp>Credits</samp>
 
-- [Aqu4holic](https://github.com/aqu4holic) for his invaluable help in the making of this.
-- [thuvasooriya](https://github.com/thuvasooriya) for his great neovim nvchad config.
+- [@Aqu4holic](https://github.com/aqu4holic) for his invaluable help in the making of this.
+- [@thuvasooriya](https://github.com/thuvasooriya) for his great neovim nvchad config.
