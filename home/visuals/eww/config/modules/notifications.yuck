@@ -1,7 +1,8 @@
 (defwidget notification [notify]
     (box :orientation "v" :space-evenly false :hexpand true
         (box :orientation "h" :space-evenly false :hexpand true :class "notification-info"
-            (image :valign "start" :class "notification-image" :visible {notify.image != "null" ? true :false} :path {notify.image} :image-width 48 :image-height 48)
+
+            (box :orientation "h" :space-evenly false :class "notification-image" :visible {notify.image != "null" ? true :false} :style "background-image: url('${notify.image}');")
             (box :orientation "v" :space-evenly false :hexpand true
                 (box :orientation "h" :space-evenly false
                     (label :halign "start" :class "notification-app" :visible {notify.app != "null" ? true :false} :text {notify.app})
