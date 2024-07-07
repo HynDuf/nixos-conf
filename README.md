@@ -37,12 +37,12 @@ Here are some information about my setup:
 <a name="setup"/>
 
 ## :wrench: <samp>Set up</samp>
-- See [SETUP GUIDES]().
+- See [SETUP GUIDES](https://github.com/HynDuf/nixos-conf/wiki/Setup).
 
 <a name="how-to-use"/>
 
 ## 🌛 <samp>How to use</samp>
-- See [USAGE GUIDES]().
+- See [USAGE GUIDES](https://github.com/HynDuf/nixos-conf/wiki/Usage).
 
 <a name="showcase"/>
 
@@ -67,3 +67,7 @@ Screenshots
 
 - [@Aqu4holic](https://github.com/aqu4holic) for his invaluable help in the making of this.
 - [@thuvasooriya](https://github.com/thuvasooriya) for his great neovim nvchad config.
+
+<p align="center">
+   <img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/footers/gray0_ctp_on_line.svg?sanitize=true"/>
+</p>

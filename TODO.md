@@ -1,2 +1,1 @@
-- [ ] Write Firefox custom css guide
 - [ ] Write Competitive Programming setup + Cmake project setup

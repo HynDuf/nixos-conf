@@ -65,4 +65,4 @@ I have migrated to `fish`. If you want to use `zsh` with nearly the same functio
 
 But believe me, `fish` is so much better (faster with full-fledged functionalities built-in).
 ### `dunst`
-I have migrated to using `eww` for notifications. If you want to use `dunst`, see [my commit here]()
+I have migrated to using `eww` for notifications. If you want to use `dunst`, see [my commit here](https://github.com/HynDuf/nixos-conf/commit/95879a3280cd8c2fbb6774fa50c1b9032aeb99a0).
