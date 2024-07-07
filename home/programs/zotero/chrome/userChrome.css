@@ -1,0 +1,32 @@
+.tabs::before,
+.tabs::after {
+	border-color: var(--tabs-border-color, rgba(0,0,0,.3)) !important;
+}
+
+.tab {
+	background: inherit !important;
+	color: inherit !important;
+}
+#tab-bar-container .tab:not(:last-child) {
+	border-color: var(--tabs-border-color, rgba(0,0,0,.3)) !important;
+}
+
+#tab-bar-container .tab.selected {
+	background: inherit !important;
+	border-color: var(--tabs-border-color, rgba(0,0,0,.3)) !important;
+	border-top-color: var(--tabline-color, #89b4fa) !important;
+}
+
+#tab-bar-container .tab:not(.selected) {
+	border-bottom-color: var(--tabs-border-color, rgba(0,0,0,.3)) !important;
+	color: #a6adc8 !important;
+}
+
+#tab-bar-container .tab:not(:first-child) .tab-close {
+  filter: invert(0.7);
+}
+
+#zotero-toolbar {
+	background: inherit !important;
+	border-bottom: inherit !important;
+}
