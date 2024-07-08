@@ -17,8 +17,8 @@ This is a complete NixOS porting and refactoring of my beloved good-old-days [Ar
 
 ## :herb: <samp>About</samp>
 
-<div style="flex:1;padding: 11px 60px 0px 10px">
-<img src=".github/screenshots/showcase-about.png" alt="Rice Showcase" align="right" width="300px">
+<div style="flex:1;padding: 11px 90px 0px 10px">
+<img src=".github/screenshots/showcase-about.png" alt="Rice Showcase" align="right" width="320px">
 </div>
 
 Here are some information about my setup:
@@ -57,6 +57,19 @@ Screenshots
 </div>
 <div align="center">
 <img src=".github/screenshots/showcase-simple-2.png" alt="simple-2">
+</div>
+</div>
+<div align="center">
+<img src=".github/screenshots/showcase-3.png" alt="simple-3">
+</div>
+<div align="center">
+<img src=".github/screenshots/showcase-4.png" alt="simple-4">
+</div>
+<div align="center">
+<img src=".github/screenshots/showcase-5.png" alt="simple-5">
+</div>
+<div align="center">
+<img src=".github/screenshots/showcase-6.png" alt="simple-6">
 </div>
 
 </details>
