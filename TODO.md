@@ -1,1 +1,0 @@
-- [ ] Write Competitive Programming setup + Cmake project setup

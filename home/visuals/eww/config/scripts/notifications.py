@@ -1,4 +1,5 @@
 import gi
+
 gi.require_version("GdkPixbuf", "2.0")
 gi.require_version("Gtk", "3.0")
 
@@ -9,7 +10,6 @@ from gi.repository import GLib
 import datetime
 import os
 import typing
-import sys
 import json
 from gi.repository import Gtk, GdkPixbuf
 import subprocess
@@ -21,15 +21,22 @@ active_popups = {}
 
 # RECIEVE NOTIFICATIONS
 
+
 class NotificationDaemon(dbus.service.Object):
     def __init__(self):
         print("Init notification daemon...")
-        bus_name = dbus.service.BusName("org.freedesktop.Notifications", dbus.SessionBus())
+        bus_name = dbus.service.BusName(
+            "org.freedesktop.Notifications", dbus.SessionBus()
+        )
         dbus.service.Object.__init__(self, bus_name, "/org/freedesktop/Notifications")
         self.dnd = False
 
-    @dbus.service.method("org.freedesktop.Notifications", in_signature="susssasa{sv}i", out_signature="u")
-    def Notify(self, app_name, replaces_id, app_icon, summary, body, actions, hints, timeout):
+    @dbus.service.method(
+        "org.freedesktop.Notifications", in_signature="susssasa{sv}i", out_signature="u"
+    )
+    def Notify(
+        self, app_name, replaces_id, app_icon, summary, body, actions, hints, timeout
+    ):
         replaces_id = int(replaces_id)
         actions = list(actions)
         app_icon = str(app_icon)
@@ -38,8 +45,8 @@ class NotificationDaemon(dbus.service.Object):
         body = str(body)
 
         log_file = self.read_log_file()
-        if log_file['notifications'] != []:
-            id = log_file['notifications'][0]['id'] + 1
+        if log_file["notifications"] != []:
+            id = log_file["notifications"][0]["id"] + 1
         else:
             id = 1
 
@@ -54,7 +61,7 @@ class NotificationDaemon(dbus.service.Object):
             "body": self.format_long_string(body, 35),
             "time": datetime.datetime.now().strftime("%H:%M"),
             "urgency": hints["urgency"] if "urgency" in hints else 1,
-            "actions": acts
+            "actions": acts,
         }
 
         if app_icon.strip():
@@ -74,14 +81,12 @@ class NotificationDaemon(dbus.service.Object):
             self.save_popup(details)
         return id
 
-
-
     def format_long_string(self, long_string, interval):
         split_string = []
         max_length = 256
 
         for i in range(0, len(long_string), interval):
-            split_string.append(long_string[i:i+interval])
+            split_string.append(long_string[i : i + interval])
 
         result = "-\n".join(split_string)
 
@@ -90,27 +95,35 @@ class NotificationDaemon(dbus.service.Object):
 
         return result
 
-    @dbus.service.method("org.freedesktop.Notifications", in_signature="", out_signature="ssss")
+    @dbus.service.method(
+        "org.freedesktop.Notifications", in_signature="", out_signature="ssss"
+    )
     def GetServerInformation(self):
         return ("linkfrg's notification daemon", "linkfrg", "1.0", "1.2")
-    
-    @dbus.service.method("org.freedesktop.Notifications", in_signature="", out_signature="as")
+
+    @dbus.service.method(
+        "org.freedesktop.Notifications", in_signature="", out_signature="as"
+    )
     def GetCapabilities(self):
-        return ('actions', 'body', 'icon-static', 'persistence')
-    
+        return ("actions", "body", "icon-static", "persistence")
+
     @dbus.service.signal("org.freedesktop.Notifications", signature="us")
     def ActionInvoked(self, id, action):
         return (id, action)
 
-    @dbus.service.method("org.freedesktop.Notifications", in_signature="us", out_signature="")
+    @dbus.service.method(
+        "org.freedesktop.Notifications", in_signature="us", out_signature=""
+    )
     def InvokeAction(self, id, action):
         self.ActionInvoked(id, action)
-    
+
     @dbus.service.signal("org.freedesktop.Notifications", signature="uu")
     def NotificationClosed(self, id, reason):
         return (id, reason)
 
-    @dbus.service.method("org.freedesktop.Notifications", in_signature="u", out_signature="")
+    @dbus.service.method(
+        "org.freedesktop.Notifications", in_signature="u", out_signature=""
+    )
     def CloseNotification(self, id):
         print("Close notification:", id)
         # current = self.read_log_file()
@@ -121,7 +134,9 @@ class NotificationDaemon(dbus.service.Object):
         self.NotificationClosed(id, 2)
         # self.DismissPopup(id)
 
-    @dbus.service.method("org.freedesktop.Notifications", in_signature="", out_signature="")
+    @dbus.service.method(
+        "org.freedesktop.Notifications", in_signature="", out_signature=""
+    )
     def ToggleDND(self):
         match self.dnd:
             case False:
@@ -129,10 +144,11 @@ class NotificationDaemon(dbus.service.Object):
             case True:
                 self.dnd = False
 
-    @dbus.service.method("org.freedesktop.Notifications", in_signature="", out_signature="")
+    @dbus.service.method(
+        "org.freedesktop.Notifications", in_signature="", out_signature=""
+    )
     def GetDNDState(self):
         subprocess.run(["eww", "update", f"do-not-disturb={json.dumps(self.dnd)}"])
-    
 
     def get_gtk_icon(self, icon_name):
         theme = Gtk.IconTheme.get_default()
@@ -140,7 +156,6 @@ class NotificationDaemon(dbus.service.Object):
 
         if icon_info is not None:
             return icon_info.get_filename()
-        
 
     def save_img_byte(self, px_args: typing.Iterable, save_path: str):
         GdkPixbuf.Pixbuf.new_from_bytes(
@@ -152,7 +167,6 @@ class NotificationDaemon(dbus.service.Object):
             rowstride=px_args[2],
             bits_per_sample=px_args[4],
         ).savev(save_path, "png")
-
 
     def write_log_file(self, data):
         output_json = json.dumps(data, indent=2)
@@ -169,7 +183,6 @@ class NotificationDaemon(dbus.service.Object):
             with open(log_file, "w") as log:
                 json.dump(empty, log)
             return empty
-        
 
     def save_notifications(self, notification):
         current = self.read_log_file()
@@ -178,20 +191,23 @@ class NotificationDaemon(dbus.service.Object):
 
         self.write_log_file(current)
 
-    @dbus.service.method("org.freedesktop.Notifications", in_signature="", out_signature="")
+    @dbus.service.method(
+        "org.freedesktop.Notifications", in_signature="", out_signature=""
+    )
     def ClearAll(self):
-        for notify in self.read_log_file()['notifications']:
-            self.NotificationClosed(notify['id'], 2)
+        for notify in self.read_log_file()["notifications"]:
+            self.NotificationClosed(notify["id"], 2)
         data = {"count": 0, "notifications": [], "popups": []}
-        
-        self.write_log_file(data)
 
+        self.write_log_file(data)
 
     # OPERATIONS WITH POPUPS
 
     def is_eww_noti_open(self):
         """Check if 'eww open notifications_popup' is already running."""
-        result = subprocess.run(['pgrep', '-f', 'eww open notifications_popup'], stdout=subprocess.PIPE)
+        result = subprocess.run(
+            ["pgrep", "-f", "eww open notifications_popup"], stdout=subprocess.PIPE
+        )
         return result.returncode == 0
 
     def save_popup(self, notification):
@@ -206,14 +222,17 @@ class NotificationDaemon(dbus.service.Object):
         self.write_log_file(current)
 
         popup_id = notification["id"]
-        active_popups[popup_id] = GLib.timeout_add_seconds(4, self.DismissPopup, popup_id)
+        active_popups[popup_id] = GLib.timeout_add_seconds(
+            4, self.DismissPopup, popup_id
+        )
 
         # Check if `eww open notifications_popup` is already running
         if not self.is_eww_noti_open():
             subprocess.run(["eww", "open", "notifications_popup"])
 
-
-    @dbus.service.method("org.freedesktop.Notifications", in_signature="u", out_signature="")
+    @dbus.service.method(
+        "org.freedesktop.Notifications", in_signature="u", out_signature=""
+    )
     def DismissPopup(self, id):
         global active_popups
 
@@ -227,12 +246,17 @@ class NotificationDaemon(dbus.service.Object):
         if not active_popups:
             subprocess.run(["eww", "close", "notifications_popup"])
 
-    @dbus.service.method("org.freedesktop.Notifications", in_signature="", out_signature="")
+    @dbus.service.method(
+        "org.freedesktop.Notifications", in_signature="", out_signature=""
+    )
     def GetCurrent(self):
-        subprocess.run(["eww", "update", f"notifications={json.dumps(self.read_log_file())}"])
+        subprocess.run(
+            ["eww", "update", f"notifications={json.dumps(self.read_log_file())}"]
+        )
 
 
 # MAINLOOP
+
 
 def main():
     DBusGMainLoop(set_as_default=True)
@@ -242,6 +266,7 @@ def main():
         loop.run()
     except KeyboardInterrupt:
         exit(0)
+
 
 if __name__ == "__main__":
     main()
