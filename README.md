@@ -80,6 +80,7 @@ Screenshots
 
 - [@Aqu4holic](https://github.com/aqu4holic) for his invaluable help in the making of this.
 - [@thuvasooriya](https://github.com/thuvasooriya) for his great neovim nvchad config.
+- [@linkfrg](https://github.com/linkfrg) for his great eww widgets.
 
 <p align="center">
    <img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/footers/gray0_ctp_on_line.svg?sanitize=true"/>

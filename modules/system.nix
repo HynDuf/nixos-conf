@@ -11,7 +11,7 @@ in {
     users.users.${username} = {
         isNormalUser = true;
         description = username;
-        extraGroups = [ "networkmanager" "wheel" "video" "audio" "docker" ];
+        extraGroups = [ "networkmanager" "wheel" "video" "audio" "docker" "adbusers" ];
     };
 
     nix.settings = {
@@ -149,6 +149,7 @@ in {
     };
 
     programs.dconf.enable = true;
+    programs.adb.enable = true;
 
     programs.fish.enable = true;
     users.defaultUserShell = pkgs.fish;
