@@ -137,6 +137,17 @@ return {
 			vim.g.mkdp_filetypes = { "markdown" }
 		end,
 	},
+	{
+		"chomosuke/typst-preview.nvim",
+		dev = false,
+		ft = "typst",
+		opts = {
+			dependencies_bin = {
+				["typst-preview"] = "typst-preview",
+				["websocat"] = "websocat",
+			},
+		},
+	},
 
 	-- --------------------
 	-- default stuff

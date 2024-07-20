@@ -84,6 +84,11 @@
     python3
     playerctl
     pamixer
+    typst
+    tinymist
+    typstfmt
+    typst-preview
+    websocat
   ];
 
   programs = {

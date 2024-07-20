@@ -99,7 +99,7 @@ local on_attach = M.on_attach
 local capabilities = M.capabilities
 
 local lspconfig = require("lspconfig")
-local servers = { "ruff", "html", "cssls", "tsserver", "clangd" }
+local servers = { "ruff", "html", "cssls", "tsserver" }
 
 for _, lsp in ipairs(servers) do
 	lspconfig[lsp].setup({
@@ -135,4 +135,13 @@ lspconfig.pyright.setup({
 	},
 })
 
+lspconfig.tinymist.setup({
+	on_init = on_init,
+	on_attach = on_attach,
+	capabilities = capabilities,
+	settings = {
+		formatterMode = "typstfmt",
+		formatterPrintWidth = 90,
+	},
+})
 return M
