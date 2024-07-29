@@ -87,7 +87,6 @@
     typst
     tinymist
     typstfmt
-    typst-preview
     websocat
   ];
 
