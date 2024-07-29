@@ -53,7 +53,8 @@ in {
     };
 
     i18n.inputMethod = {
-        enabled = "ibus";
+        enable = true;
+        type = "ibus";
         ibus.engines = [
             bamboo
         ];
@@ -110,7 +111,6 @@ in {
         touchpad = {
             tapping = true;
             middleEmulation = true;
-            naturalScrolling = true;
         };
     };
 
@@ -205,7 +205,6 @@ in {
     in
         formatted;
 
-    sound.enable = true;
     hardware.pulseaudio.enable = true;
 
     security.rtkit.enable = true;

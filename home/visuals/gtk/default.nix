@@ -1,14 +1,12 @@
 { config, pkgs, ...}:
 {
     gtk = {
-        enable = true;
         catppuccin = {
             enable = true;
             flavor = "mocha";
             accent = "maroon";
-            size = "standard";
-            tweaks = [ "rimless" ];
         };
+        enable = true;
         font = {
             name = "MonoLisa";
             size = 11;
