@@ -10,13 +10,8 @@ linemode       = "size"
 zathura = [
 	{ run = 'zathura "$@"', orphan = true, for = "unix", desc = "Open with Zathura" },
 ]
-extract-folder = [
-	{ run = 'filename="${1%.*}"; mkdir -p "$filename"; unar -o "$filename" "$1"', desc = "Extract to folder", for = "unix" },
-]
 
 [open]
 prepend_rules = [
 	{ name = "*.pdf", use = ["zathura", "reveal"] },
-	{ mime = "application/*zip", use = [ "extract", "extract-folder", "reveal" ] },
-	{ mime = "application/x-{tar,bzip*,7z-compressed,xz,rar}", use = [ "extract", "extract-folder", "reveal" ] },
 ]

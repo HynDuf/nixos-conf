@@ -1,6 +1,4 @@
-{
-  config,
-  pkgs,
+{ config, pkgs,
   libs,
   ...
 }: {
@@ -88,6 +86,10 @@
     tinymist
     typstfmt
     websocat
+    transmission_4-gtk
+    mplayer
+    nautilus
+    google-chrome
   ];
 
   programs = {
