@@ -15,12 +15,6 @@
             rm -f -- "$tmp"
         end
 
-        set -x GTK_IM_MODULE ibus
-        set -x QT_IM_MODULE ibus
-        set -x XMODIFIERS @im=ibus
-        set -x QT4_IM_MODULE ibus
-        set -x CLUTTER_IM_MODULE ibus
-        set -x GLFW_IM_MODULE ibus
         if status --is-login
             if test -z "$DISPLAY" -a $XDG_VTNR = 1
                 exec startx -- -keeptty

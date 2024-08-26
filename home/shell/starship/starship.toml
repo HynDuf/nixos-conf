@@ -1,6 +1,6 @@
 add_newline = true
 
-format = '''[╭─](#cba6f7) 🌸 $username$hostname$directory$git_branch$git_commit$git_state$git_status$jobs$cmd_duration$python$conda$nodejs$direnv$docker
+format = '''[╭─](#cba6f7) 🌸 $username$hostname$directory$git_branch$git_commit$git_state$git_status$jobs$cmd_duration$nix_shell$python$conda$nodejs$direnv$docker
 [╰─](#cba6f7) $character'''
 
 [character]
@@ -90,3 +90,12 @@ disabled = false
 symbol = '🐳 '
 format = '[\[${symbol}\(${context}\)\]]($style)'
 style = 'bold fg:#346beb'
+
+[nix_shell]
+disabled = false
+impure_msg = '[impure shell](bold red)'
+pure_msg = '[pure shell](bold green)'
+unknown_msg = '[unknown shell](bold yellow)'
+style = 'bold fg:#6bfdff'
+symbol = '❄ '
+format = '[\[$symbol$state( \($name\))\]]($style)'

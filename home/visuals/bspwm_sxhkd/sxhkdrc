@@ -198,11 +198,11 @@ super + shift + {F10, F11}
 #
 
 # fullscreen screenshot save
-super + Print
+super + End
     ~/bin/screenshot -f
 
 # cropped save
-super + shift + Print
+super + shift + End
     ~/bin/screenshot -s
 
 # clipboard fullscreen
@@ -214,7 +214,7 @@ super + shift + s
     ~/bin/screenshot -sc
 
 # clipboard cropped with edit
-ctrl + Print
+ctrl + End
     ~/bin/screenshot -edit
 
 #

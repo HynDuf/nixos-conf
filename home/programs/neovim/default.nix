@@ -36,9 +36,7 @@
       # clang-tools_17
       clang-tools
 
-      ### rust ###
-      # rust-analyzer
-
+      gopls
       ### nix ###
       nil
       alejandra

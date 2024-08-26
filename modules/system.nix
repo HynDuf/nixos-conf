@@ -57,8 +57,17 @@ in {
         type = "ibus";
         ibus.engines = [
             bamboo
+            pkgs.ibus-engines.anthy
         ];
     };
+
+    # ibus
+    environment.variables.GTK_IM_MODULE = "ibus";
+    environment.variables.QT_IM_MODULE = "ibus";
+    environment.variables.QT4_IM_MODULE = "ibus";
+    environment.variables.CLUTTER_IM_MODULE = "ibus";
+    environment.variables.GLFW_IM_MODULE = "ibus";
+    environment.variables.XMODIFIERS = "@im=ibus";
 
     services.xserver = {
         enable = true;
@@ -239,4 +248,8 @@ in {
         };
     };
     services.blueman.enable = true;
+    hardware.keyboard.qmk.enable = true;
+    services.udev.packages = [ pkgs.via ];
+    services.flatpak.enable = true;
+    xdg.portal.enable = true;
 }

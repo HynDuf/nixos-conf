@@ -127,6 +127,15 @@ return {
 	},
 
 	-- --------------------
+	-- programming stuff
+	-- --------------------
+	{
+		"mrcjkb/rustaceanvim",
+		version = "^5",
+		lazy = false,
+	},
+
+	-- --------------------
 	-- default stuff
 	-- --------------------
 	{

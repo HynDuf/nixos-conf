@@ -90,6 +90,8 @@
     mplayer
     nautilus
     google-chrome
+    via
+    rustdesk-flutter
   ];
 
   programs = {

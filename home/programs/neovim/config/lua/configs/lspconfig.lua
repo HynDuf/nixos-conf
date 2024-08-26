@@ -99,7 +99,7 @@ local on_attach = M.on_attach
 local capabilities = M.capabilities
 
 local lspconfig = require("lspconfig")
-local servers = { "ruff", "html", "cssls", "tsserver" }
+local servers = { "ruff", "html", "cssls", "tsserver", "gopls" }
 
 for _, lsp in ipairs(servers) do
 	lspconfig[lsp].setup({
