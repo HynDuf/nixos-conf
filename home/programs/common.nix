@@ -92,6 +92,7 @@
     google-chrome
     via
     rustdesk-flutter
+    pkg-config
   ];
 
   programs = {

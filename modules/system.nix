@@ -23,6 +23,7 @@ in {
     nixpkgs.config.allowUnfree = true;
     nixpkgs.config.permittedInsecurePackages = [
         "xpdf-4.05"
+        "openssl-1.1.1w"
     ];
 
     # do garbage collection weekly to keep disk usage low
@@ -68,6 +69,9 @@ in {
     environment.variables.CLUTTER_IM_MODULE = "ibus";
     environment.variables.GLFW_IM_MODULE = "ibus";
     environment.variables.XMODIFIERS = "@im=ibus";
+
+    # direnv shell
+    environment.variables.DIRENV_WARN_TIMEOUT = 0;
 
     services.xserver = {
         enable = true;

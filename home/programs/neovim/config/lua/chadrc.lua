@@ -8,7 +8,7 @@ M.ui = {
 		Search = { bg = "#cba6f7" },
 		Type = { fg = "#89b4fa" },
 	},
-	theme = "catppuccin",
+	theme = "tokyodark",
 	transparency = true,
 	tabufline = {
 		order = { "treeOffset", "buffers", "tabs" },
