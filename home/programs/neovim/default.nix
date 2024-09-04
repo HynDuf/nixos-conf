@@ -53,9 +53,6 @@
       pyright
       ruff
       ruff-lsp
-
-      ### lazygit
-      lazygit
     ]
     ++ lib.optionals pkgs.stdenv.isLinux [
       wl-clipboard

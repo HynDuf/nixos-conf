@@ -14,5 +14,6 @@
         ./vencord
         ./espanso
         ./lsp
+        ./lazygit
     ];
 }
