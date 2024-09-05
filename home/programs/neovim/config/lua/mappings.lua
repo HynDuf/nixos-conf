@@ -24,6 +24,7 @@ map("n", "<leader>lg", "<cmd> LazyGit <CR>", { desc = "LazyGit Open" })
 map("n", "<leader>ls", "<cmd> Lazy sync <CR>", { desc = "Lazy Sync Config" })
 map("n", "<leader>o", "<cmd>Portal jumplist backward<CR>", { desc = "Portal Backward" })
 map("n", "<leader>i", "<cmd>Portal jumplist forward<CR>", { desc = "Portal Forward" })
+map("n", "<leader>co", "<cmd>Outline<CR>", { desc = "Toggle Outline" })
 
 -- Doesn't work as expected yet
 -- map({ "n", "t" }, "<F9>", function()

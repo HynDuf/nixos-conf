@@ -1,7 +1,8 @@
 local M = {}
 
 M.ui = {
-  hl_override = require "highlights",
+	hl_add = require("highlights").add,
+	hl_override = require("highlights").override,
 	theme = "tokyodark",
 	transparency = true,
 	tabufline = {

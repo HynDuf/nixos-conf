@@ -65,7 +65,6 @@
     unar
 
     anki-bin
-    pinta
     qimgv
 
     conda

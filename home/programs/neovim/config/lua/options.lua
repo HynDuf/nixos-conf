@@ -7,7 +7,7 @@ vim.keymap.set("x", "p", function()
 end, { remap = false, expr = true })
 
 -- leap: greying out the search area
-vim.api.nvim_set_hl(0, "LeapBackdrop", { link = "Comment" })
+vim.api.nvim_set_hl(0, "LeapBackdrop", { fg = "#696b87" })
 vim.api.nvim_set_hl(0, "LeapLabelPrimary", {
 	fg = "#a6e3a1",
 	bg = "black",
