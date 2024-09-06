@@ -73,12 +73,11 @@ M.override = {
 
 	["@markup.strong"] = {
 		bold = true,
-		fg = "#dc8a78",
+		fg = "#c6a0f6",
 	},
 }
 
 M.add = {
-
 	["@markup.heading.1.markdown"] = {
 		bold = true,
 		fg = "#f38ba8",
