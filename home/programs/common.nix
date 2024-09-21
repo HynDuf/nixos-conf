@@ -1,7 +1,10 @@
-{ config, pkgs,
+{
+  config,
+  pkgs,
   libs,
   ...
-}: {
+}:
+{
   # Packages that should be installed to the user profile.
   home.packages = with pkgs; [
     # here is some command line tools I use frequently
@@ -86,16 +89,20 @@
     typstfmt
     websocat
     transmission_4-gtk
-    mplayer
     nautilus
     google-chrome
     via
     rustdesk-flutter
     pkg-config
+    beekeeper-studio
+    ngrok
+    postman
+    teams-for-linux
+    openssl
   ];
 
   programs = {
-    feh.enable = true; # image viewer
+    feh.enable = true;
     zoxide.enable = true;
   };
 
@@ -104,4 +111,3 @@
     copyq.enable = true;
   };
 }
-

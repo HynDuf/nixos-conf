@@ -2,7 +2,8 @@
   pkgs,
   config,
   ...
-}: {
+}:
+{
   programs.neovim = {
     enable = true;
   };
@@ -10,7 +11,8 @@
     source = ./config;
     recursive = true;
   };
-  home.packages = with pkgs;
+  home.packages =
+    with pkgs;
     [
       (writeShellScriptBin "clean-nvim" ''
         rm -rf ${config.xdg.dataHome}/nvim

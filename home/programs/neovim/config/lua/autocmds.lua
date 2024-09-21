@@ -68,7 +68,7 @@ autocmd("BufRead", {
 })
 
 autocmd("FileType", {
-	pattern = "lua",
+	pattern = {"lua", "nix"},
 	callback = function()
 		vim.opt.tabstop = 2
 		vim.opt.shiftwidth = 2

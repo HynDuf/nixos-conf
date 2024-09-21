@@ -1,19 +1,19 @@
 {
-    imports = [
-        ./common.nix
-        ./xdg
+  imports = [
+    ./common.nix
+    ./xdg
 
-        ./shells
+    ./shells
 
-        ./vscode
-        ./neovim
-        ./zathura
+    ./vscode
+    ./neovim
+    ./zathura
 
-        ./spectacle
-        ./redshift
-        ./vencord
-        ./espanso
-        ./lsp
-        ./lazygit
-    ];
+    ./spectacle
+    ./redshift
+    ./vencord
+    ./espanso
+    ./lsp
+    ./lazygit
+  ];
 }

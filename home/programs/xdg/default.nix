@@ -1,5 +1,5 @@
 {
-    imports = [
-        ./xdg.nix
-    ];
+  imports = [
+    ./xdg.nix
+  ];
 }

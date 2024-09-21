@@ -1,13 +1,12 @@
-
 { config, pkgs, ... }:
 {
-    programs.eww = {
-        enable = true;
-        configDir = ./config;
-    };
+  programs.eww = {
+    enable = true;
+    configDir = ./config;
+  };
 
-    xdg.configFile."eww" = {
-        source = ./config;
-        recursive = true;
-    };
+  xdg.configFile."eww" = {
+    source = ./config;
+    recursive = true;
+  };
 }

@@ -10,8 +10,12 @@ linemode       = "size"
 zathura = [
 	{ run = 'zathura "$@"', orphan = true, for = "unix", desc = "Open with Zathura" },
 ]
+qimgv = [
+	{ run = 'qimgv "$@"', orphan = true, for = "unix", desc = "Open with qimgv" },
+]
 
 [open]
 prepend_rules = [
 	{ name = "*.pdf", use = ["zathura", "reveal"] },
+    { mime = "image/*", use = [ "qimgv", "open", "reveal" ] },
 ]

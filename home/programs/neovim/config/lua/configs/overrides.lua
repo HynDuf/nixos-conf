@@ -17,6 +17,7 @@ M.treesitter = {
 		"astro",
 		"svelte",
 		"dockerfile",
+    "sql",
 		-- utils
 		"fish",
 		"gitignore",
@@ -31,14 +32,15 @@ M.treesitter = {
 		"cpp",
 		"c",
 		"zig",
+    "rust",
 		"arduino",
 		-- mrk
 		"markdown",
 		"markdown_inline",
 		"latex",
+    "typst",
 		"python",
     "go",
-    "rust",
 	},
 	indent = {
 		enable = true,

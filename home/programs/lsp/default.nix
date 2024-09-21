@@ -1,5 +1,5 @@
 {
-    imports = [
-        ./clangd
-    ];
+  imports = [
+    ./clangd
+  ];
 }

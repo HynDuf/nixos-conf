@@ -1,8 +1,8 @@
 { pkgs, config, ... }:
 {
-    programs.eza = {
-        enable = true;
+  programs.eza = {
+    enable = true;
 
-        icons = true;
-    };
+    icons = true;
+  };
 }

@@ -52,14 +52,6 @@ M.override = {
 	["@function.call"] = {
 		italic = true,
 	},
-	-- symbolic
-	["@operator"] = {
-		italic = true,
-	},
-	-- logical keywords
-	["@keyword.operator"] = {
-		italic = true,
-	},
 	-- function parameters
 	["@parameter"] = {
 		italic = true,

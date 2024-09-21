@@ -12,7 +12,7 @@ local options = {
 		zig = { "zigfmt" },
 		cpp = { "clang_format" },
 		c = { "clang_format" },
-		nix = { "alejandra" },
+		nix = { "nixfmt" },
 		python = function(bufnr)
 			if require("conform").get_formatter_info("ruff_format", bufnr).available then
 				return { "ruff_fix", "ruff_format" }
