@@ -66,10 +66,8 @@
     poppler
     ffmpegthumbnailer
     unar
-
     anki-bin
     qimgv
-
     conda
     xorg.xhost
     qalculate-gtk
@@ -77,7 +75,6 @@
     simplescreenrecorder
     screenkey
     dua
-    navi
     duf
     ffmpeg
     microsoft-edge
@@ -90,7 +87,6 @@
     websocat
     transmission_4-gtk
     nautilus
-    google-chrome
     via
     rustdesk-flutter
     pkg-config

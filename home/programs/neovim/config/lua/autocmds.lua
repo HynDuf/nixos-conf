@@ -32,7 +32,7 @@ local set_spacing = function(padding_amount, margin_amount)
 		"@",
 		"set-spacing",
 		"padding=" .. padding_amount,
-		"margin=" .. margin_amount,
+		"margin-h=" .. margin_amount,
 	})
 end
 

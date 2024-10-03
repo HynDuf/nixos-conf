@@ -76,7 +76,8 @@
         echo "Launching tmux for ''$PRJ"
         set -x
         cd "''$PRJ" && \
-          exec tmux -S "''$PRJ".tmux attach
+          kitty @ set-spacing padding=0 margin=0 && \
+            exec tmux -S "''$PRJ".tmux attach
       '';
     })
   ];

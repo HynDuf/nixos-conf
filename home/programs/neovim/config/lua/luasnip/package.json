@@ -1,14 +1,12 @@
 {
   "name": "friendly-snippets",
   "engines": {
-    "vscode": "^1.89.1"
+    "vscode": "^1.93.1"
   },
   "contributes": {
     "snippets": [
       {
-        "language": [
-          "cpp"
-        ],
+        "language": "cpp",
         "path": "./snippets/cpp.json"
       }
     ]
