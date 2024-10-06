@@ -95,6 +95,7 @@
     postman
     teams-for-linux
     openssl
+    nvtopPackages.nvidia
   ];
 
   programs = {

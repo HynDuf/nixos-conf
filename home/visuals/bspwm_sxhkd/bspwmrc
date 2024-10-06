@@ -25,8 +25,8 @@ trash-empty -f 40 &
 copyq &
 espanso daemon &
 
-bspc wm -O eDP-1 HDMI-A-1-0
-bspc monitor eDP-1 -d 1 2 3 4 5 6 7
+bspc wm -O eDP HDMI-A-1-0
+bspc monitor eDP -d 1 2 3 4 5 6 7
 bspc monitor HDMI-A-1-0 -d 8 9 10
 
 bspc config border_width 2

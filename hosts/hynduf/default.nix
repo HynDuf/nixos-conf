@@ -9,6 +9,7 @@
     # Include the results of the hardware scan.
     ../../modules/system.nix
 
+    ./nvidia.nix
     ./hardware-configuration.nix
   ];
 
