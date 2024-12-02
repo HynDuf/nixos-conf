@@ -24,8 +24,9 @@
   ];
   boot.initrd.kernelModules = [ "nvidia" ];
   boot.kernelModules = [ "kvm-amd" ];
-  boot.kernelPackages = pkgs.linuxPackages_latest;
+  boot.kernelPackages = pkgs.linuxPackages_6_11;
   boot.extraModulePackages = [ config.boot.kernelPackages.nvidia_x11 ];
+  hardware.firmware = [ pkgs.linux-firmware ];
   fileSystems."/" = {
     device = "/dev/disk/by-label/yoru";
     fsType = "ext4";

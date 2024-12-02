@@ -147,17 +147,13 @@ in
     packages = with pkgs; [
       # normal fonts
       noto-fonts
-      noto-fonts-cjk
+      noto-fonts-cjk-sans
       noto-fonts-emoji
       newcomputermodern
 
       # nerdfonts
-      (nerdfonts.override {
-        fonts = [
-          "FiraCode"
-          "JetBrainsMono"
-        ];
-      })
+      nerd-fonts.fira-code
+      nerd-fonts.jetbrains-mono
 
     ];
 
@@ -277,4 +273,15 @@ in
   services.udev.packages = [ pkgs.via ];
   services.flatpak.enable = true;
   xdg.portal.enable = true;
+  xdg.mime.defaultApplications = {
+    "image/png" = [
+      "qimgv.desktop"
+    ];
+    "image/jpeg" = [
+      "qimgv.desktop"
+    ];
+    "image/jpg" = [
+      "qimgv.desktop"
+    ];
+  };
 }

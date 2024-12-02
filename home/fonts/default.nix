@@ -6,13 +6,9 @@
 }:
 {
   home.packages = with pkgs; [
-    (pkgs.nerdfonts.override {
-      fonts = [
-        "FiraCode"
-        "JetBrainsMono"
-        "Iosevka"
-      ];
-    })
+    nerd-fonts.fira-code
+    nerd-fonts.jetbrains-mono
+    nerd-fonts.iosevka
   ];
 
   fonts.fontconfig.enable = true;

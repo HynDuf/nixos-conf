@@ -4,6 +4,32 @@
     enable = true;
 
     extraConfig = ''
+      Host 112.137.129.158
+            ForwardAgent yes
+            IdentityFile ~/.ssh/id_ed25519
+            AddKeysToAgent yes
+            User nguyenthanhphat
+            Compression no
+            ServerAliveInterval 0
+            ServerAliveCountMax 3
+            HashKnownHosts no
+            UserKnownHostsFile ~/.ssh/known_hosts
+            ControlMaster no
+            ControlPath ~/.ssh/master-%r@%n:%p
+            ControlPersist no
+      Host 112.137.129.161
+            ForwardAgent yes
+            IdentityFile ~/.ssh/id_ed25519
+            AddKeysToAgent yes
+            User phatnt
+            Compression no
+            ServerAliveInterval 0
+            ServerAliveCountMax 3
+            HashKnownHosts no
+            UserKnownHostsFile ~/.ssh/known_hosts
+            ControlMaster no
+            ControlPath ~/.ssh/master-%r@%n:%p
+            ControlPersist no
       Host github.com
           User git
           Hostname ssh.github.com

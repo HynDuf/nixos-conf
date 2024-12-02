@@ -96,6 +96,8 @@
     teams-for-linux
     openssl
     nvtopPackages.nvidia
+    qgis
+    mediainfo
   ];
 
   programs = {

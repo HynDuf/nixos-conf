@@ -12,8 +12,7 @@ super + shift + r
 
 # program launcher
 super + c
-    rofi -show drun -theme "$HOME/.config/rofi/themes/app-launcher.rasi"
-
+    rofi -show drun -me-select-entry '' -me-accept-entry
 # emoji selector launcher
 super + shift + e
     rofi -modi emoji -show emoji -theme "$HOME/.config/rofi/themes/emojimenu.rasi"

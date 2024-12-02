@@ -23,7 +23,6 @@ pidof redshift || redshift &
 trash-empty -f 40 &
 # wmname LG3D & # This is for IntellJ and IntellJ-based (Android Studio)
 copyq &
-espanso daemon &
 
 bspc wm -O eDP HDMI-A-1-0
 bspc monitor eDP -d 1 2 3 4 5 6 7
