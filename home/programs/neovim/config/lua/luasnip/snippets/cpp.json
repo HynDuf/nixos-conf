@@ -30,10 +30,15 @@
 		"description": "HynDufCP"
 	},
 	"HynDufTime": {
-		"prefix": "HynDufTime",
+		"prefix": "TIMECP",
 		"body": [
 			"#ifdef HynDuf",
-			"    cerr << \"Time elapsed: \" << 1.0 * clock() / CLOCKS_PER_SEC << \" s.\\n\";",
+			"\tauto start = chrono::steady_clock::now();",
+			"#endif",
+            "$0",
+			"#ifdef HynDuf",
+			"\tauto end = chrono::steady_clock::now();",
+			"\tcout << \"\\nExecution time : \" << chrono::duration_cast<chrono::milliseconds> (end - start).count() << \"[ms]\" << endl;",
 			"#endif"
 		],
 		"description": "HynDufTime"

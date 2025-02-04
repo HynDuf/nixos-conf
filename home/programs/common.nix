@@ -4,7 +4,17 @@
   libs,
   ...
 }:
-{
+let
+  unstable = import
+    (builtins.fetchTarball {
+      name = "unstable";
+      url = "https://github.com/nixos/nixpkgs/archive/7e44df498f1e99e9e67babe31bc375911ae30368.tar.gz";
+      sha256 = "0m5fpbr7x6am2wqzjxlfmvmh37s97schska16kf4xlx0n2rbyiqb";
+    }) {
+      system = "x86_64-linux";
+      config.allowUnfree = true;
+    };
+in {
   # Packages that should be installed to the user profile.
   home.packages = with pkgs; [
     # here is some command line tools I use frequently
@@ -42,7 +52,7 @@
     syncthing
 
     # app
-    obsidian
+    unstable.obsidian
     zotero
 
     # monitor
@@ -66,7 +76,7 @@
     poppler
     ffmpegthumbnailer
     unar
-    anki-bin
+    unstable.anki-bin
     qimgv
     conda
     xorg.xhost
