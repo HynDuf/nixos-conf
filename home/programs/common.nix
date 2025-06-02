@@ -8,10 +8,10 @@ let
   unstable = import
     (builtins.fetchTarball {
       name = "unstable";
-      url = "https://github.com/nixos/nixpkgs/archive/7e44df498f1e99e9e67babe31bc375911ae30368.tar.gz";
-      sha256 = "0m5fpbr7x6am2wqzjxlfmvmh37s97schska16kf4xlx0n2rbyiqb";
+      url = "https://github.com/nixos/nixpkgs/archive/23c614c23fc7b11aec51ed715fbe096f3ba5afe5.tar.gz";
+      sha256 = "1hmgk1ff4xi568bcz5x2284nx29a8yfkcf6k8jqf5yagrhxxyqwm";
     }) {
-      system = "x86_64-linux";
+      system = pkgs.system;
       config.allowUnfree = true;
     };
 in {
@@ -87,13 +87,12 @@ in {
     dua
     duf
     ffmpeg
-    microsoft-edge
     python3
     playerctl
     pamixer
-    typst
-    tinymist
-    typstfmt
+    unstable.typst
+    unstable.tinymist
+    unstable.typstfmt
     websocat
     transmission_4-gtk
     nautilus
@@ -106,8 +105,8 @@ in {
     teams-for-linux
     openssl
     nvtopPackages.nvidia
-    qgis
     mediainfo
+    unstable.google-chrome
   ];
 
   programs = {

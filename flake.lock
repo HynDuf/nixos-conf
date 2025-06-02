@@ -80,11 +80,11 @@
         "nixpkgs": "nixpkgs_2"
       },
       "locked": {
-        "lastModified": 1738545550,
-        "narHash": "sha256-80384pp0e04G/wlQXlb7L7fjA3wKUeWJkPKYUkLuv2k=",
+        "lastModified": 1748830392,
+        "narHash": "sha256-qCIs1DZBx5byjZDNxppPk9zntD7utse0V9BdtWdMnnE=",
         "owner": "HynDuf",
         "repo": "zen-browser-flake",
-        "rev": "8c94ceba5572167f854c8eeb093635503c9998b1",
+        "rev": "7050c25662643b729cf36ee1ff97e120318b5d67",
         "type": "github"
       },
       "original": {

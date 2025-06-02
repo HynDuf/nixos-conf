@@ -32,8 +32,8 @@ in
       "nix-command"
       "flakes"
     ];
-
   };
+  nix.settings.trusted-users = [ "root" "hynduf" ];
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
@@ -187,7 +187,7 @@ in
   users.defaultUserShell = pkgs.fish;
 
   # Install firefox.
-  programs.firefox.enable = true;
+  # programs.firefox.enable = true;
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
@@ -236,8 +236,14 @@ in
     in
     formatted;
 
-  hardware.pulseaudio.enable = true;
-  services.pipewire.enable = false;
+  hardware.pulseaudio.enable = false;
+  services.pipewire = {
+    enable = true;
+    audio.enable = true;
+    alsa.enable = true;
+    pulse.enable = true;
+    jack.enable = true;
+  };
 
   programs.noisetorch = {
     enable = true;
@@ -261,6 +267,7 @@ in
         ControllerMode = "dual";
         FastConnectable = "true";
         Experimental = "true";
+        Enable = "Source,Sink,Media,Socket";
       };
 
       Policy = {
@@ -284,4 +291,6 @@ in
       "qimgv.desktop"
     ];
   };
+  virtualisation.virtualbox.host.enable = true;
+  users.extraGroups.vboxusers.members = [ "user-with-access-to-virtualbox" ];
 }

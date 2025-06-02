@@ -154,7 +154,7 @@ return {
 		ft = "typst",
 		opts = {
 			dependencies_bin = {
-				["typst-preview"] = "tinymist",
+				["tinymist"] = "tinymist",
 				["websocat"] = "websocat",
 			},
 		},

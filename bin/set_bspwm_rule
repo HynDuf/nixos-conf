@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 
-bspc rule -a firefox desktop=^2 state=monocle
+bspc rule -a zen desktop=^2 state=monocle
 bspc rule -a vesktop desktop=^4 state=monocle

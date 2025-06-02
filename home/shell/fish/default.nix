@@ -7,12 +7,12 @@
       eval (direnv hook fish)
       eval (ssh-agent -c) &>/dev/null
       function r
-          set tmp (mktemp -t "yazi-cwd.XXXXXX")
-          yazi $argv --cwd-file="$tmp"
-          if set cwd (cat -- "$tmp"); and [ -n "$cwd" ]; and [ "$cwd" != "$PWD" ]
-              cd -- "$cwd"
-          end
-          rm -f -- "$tmp"
+        set tmp (mktemp -t "yazi-cwd.XXXXXX")
+        yazi $argv --cwd-file="$tmp"
+        if read -z cwd < "$tmp"; and [ -n "$cwd" ]; and [ "$cwd" != "$PWD" ]
+          builtin cd -- "$cwd"
+        end
+        rm -f -- "$tmp"
       end
 
       if status --is-login
