@@ -17,9 +17,26 @@ zathura = [
 qimgv = [
 	{ run = 'qimgv "$@"', orphan = true, for = "unix", desc = "Open with qimgv" },
 ]
+libreoffice = [
+	{ run = 'libreoffice "$@"', orphan = true, for = "unix", desc = "Open with libreoffice" },
+]
+subtitle = [
+	{ run = ''' echo sub-add "'$0'" | socat - /tmp/mpv.sock ''', desc = "Add sub to MPV" },
+]
+play = [
+	{ run = 'mpv --force-window --input-ipc-server=/tmp/mpv.sock "$@"', orphan = true, for = "unix" },
+]
 
 [open]
 prepend_rules = [
 	{ name = "*.pdf", use = ["zathura", "reveal"] },
-    { mime = "image/*", use = [ "qimgv", "open", "reveal" ] },
+	{ name = "*.{xls,xlsx,xlsm,xltx,xlsb,odt,ods,odp,doc,docx,ppt,pptx}", use = ["libreoffice", "reveal"] },
+  { mime = "image/*", use = [ "qimgv", "open", "reveal" ] },
+  { name = "*.{ass,srt,ssa,sty,sup,vtt}", use = [ "subtitle", "edit" ] },
+]
+
+[plugin]
+prepend_fetchers = [
+	{ id = "git", name = "*", run = "git" },
+	{ id = "git", name = "*/", run = "git" },
 ]

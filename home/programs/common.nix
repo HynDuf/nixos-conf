@@ -107,6 +107,7 @@ in {
     nvtopPackages.nvidia
     mediainfo
     unstable.google-chrome
+    socat
   ];
 
   programs = {

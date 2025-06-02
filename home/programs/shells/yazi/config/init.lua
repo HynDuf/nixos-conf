@@ -1,4 +1,6 @@
 -- ya pkg add yazi-rs/plugins:git
+-- ya pkg add yazi-rs/plugins:diff
+-- ya pkg add yazi-rs/plugins:mount
 -- ya pkg add yazi-rs/plugins:full-border
 -- ya pkg add Rolv-Apneseth/starship
 -- ya pkg add lpanebr/yazi-plugins:first-non-directory
