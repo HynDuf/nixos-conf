@@ -203,6 +203,7 @@ in
 
     # audio
     libpulseaudio
+    pulseaudioFull
 
     # display
     brightnessctl

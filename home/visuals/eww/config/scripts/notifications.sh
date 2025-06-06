@@ -9,6 +9,13 @@ dismiss() {
 }
 
 log_file="$HOME/.cache/notifications.json"
+# Sample notifications.json file
+# {
+#   "count": 0,
+#   "notifications": [],
+#   "popups": []
+# }
+
 
 read_log_file() {
     if [ ! -f "$log_file" ]; then
