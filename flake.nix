@@ -24,11 +24,13 @@
     }@inputs:
     let
       system = "x86_64-linux";
+      hostname = "nurly_3";
+      username = "nurlyx";
     in
     {
-      nixosConfigurations.yoru = nixpkgs.lib.nixosSystem {
+      nixosConfigurations."${hostname}" = nixpkgs.lib.nixosSystem {
         specialArgs = {
-          inherit inputs;
+          inherit inputs username hostname;
         };
         modules = [
 
@@ -40,7 +42,7 @@
           {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
-            home-manager.users.hynduf = {
+            home-manager.users."${username}" = {
               imports = [
                 ./home
                 {
