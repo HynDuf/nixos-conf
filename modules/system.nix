@@ -6,10 +6,11 @@
   config,
   pkgs,
   lib,
+  username,
+  hostname,
   ...
 }:
 let
-  username = "hynduf";
   bamboo = pkgs.callPackage ./pkgs/ibus-bamboo.nix { };
 in
 {
@@ -33,7 +34,7 @@ in
       "flakes"
     ];
   };
-  nix.settings.trusted-users = [ "root" "hynduf" ];
+  nix.settings.trusted-users = [ "root" "${username}" ];
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
@@ -264,7 +265,7 @@ in
 
     settings = {
       General = {
-        Name = "yoru";
+        Name = "${hostname}";
         ControllerMode = "dual";
         FastConnectable = "true";
         Experimental = "true";

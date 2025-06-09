@@ -49,11 +49,11 @@ in {
     imagemagick
     xclip
     maim
-    syncthing
+    unstable.syncthing
 
     # app
     unstable.obsidian
-    zotero
+    unstable.zotero
 
     # monitor
     btop
@@ -108,6 +108,7 @@ in {
     mediainfo
     unstable.google-chrome
     socat
+    unstable.slack
   ];
 
   programs = {
