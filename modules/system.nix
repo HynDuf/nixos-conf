@@ -102,7 +102,10 @@ in
         enable = true;
       };
     };
+
+    xkb.options = "caps:swapescape";
   };
+  console.useXkbConfig = true;
 
   systemd = {
     targets = {

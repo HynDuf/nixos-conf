@@ -4,8 +4,8 @@ let
   unstable = import
     (builtins.fetchTarball {
       name = "unstable";
-      url = "https://github.com/nixos/nixpkgs/archive/23c614c23fc7b11aec51ed715fbe096f3ba5afe5.tar.gz";
-      sha256 = "1hmgk1ff4xi568bcz5x2284nx29a8yfkcf6k8jqf5yagrhxxyqwm";
+      url = "https://github.com/nixos/nixpkgs/archive/55043dbf08ba864dddd3c884101eb1d81cc2ff71.tar.gz";
+      sha256 = "02axd3q3329ql58v3vfry9a8b1c6r12lllzyl1z6c75w9r3ixd86";
     }) {
       system = pkgs.system;
       config.allowUnfree = true;

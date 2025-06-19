@@ -38,6 +38,10 @@
       # clang-tools_17
       clang-tools
 
+      # shell
+      bash-language-server
+      shellcheck
+      
       gopls
       ### nix ###
       nil
