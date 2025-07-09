@@ -104,6 +104,8 @@ in
     };
 
     xkb.options = "caps:swapescape";
+    autoRepeatDelay = 350;
+    autoRepeatInterval = 20;
   };
   console.useXkbConfig = true;
 

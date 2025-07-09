@@ -6,7 +6,7 @@ img="$(ls $wallpaper_path | shuf -n 1)"
 pgrep -x sxhkd > /dev/null || sxhkd -m -1 &
 
 xsetroot -cursor_name left_ptr &
-xset r rate 330 20 &
+xset r rate 350 20 &
 
 "$HOME/.config/eww/scripts/start.sh" &
 "$HOME/bin/launch.sh" &

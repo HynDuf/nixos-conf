@@ -109,6 +109,7 @@ in {
     unstable.google-chrome
     socat
     unstable.slack
+    unstable.qutebrowser-qt5
   ];
 
   programs = {

@@ -5,7 +5,6 @@
     shellInit = ''
       set -g fish_greeting
       eval (direnv hook fish)
-      eval (ssh-agent -c) &>/dev/null
       function r
         set tmp (mktemp -t "yazi-cwd.XXXXXX")
         yazi $argv --cwd-file="$tmp"

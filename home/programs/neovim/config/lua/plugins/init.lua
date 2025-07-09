@@ -153,6 +153,7 @@ return {
 		dev = false,
 		ft = "typst",
 		opts = {
+      open_cmd = "qutebrowser %s",
 			dependencies_bin = {
 				["tinymist"] = "tinymist",
 				["websocat"] = "websocat",
