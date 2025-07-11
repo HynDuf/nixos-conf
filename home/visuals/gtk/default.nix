@@ -1,11 +1,6 @@
 { config, pkgs, ... }:
 {
   gtk = {
-    catppuccin = {
-      enable = true;
-      flavor = "mocha";
-      accent = "maroon";
-    };
     enable = true;
     font = {
       name = "MonoLisa";
@@ -16,4 +11,5 @@
       package = pkgs.papirus-icon-theme;
     };
   };
+  home.pointerCursor.size = 42;
 }

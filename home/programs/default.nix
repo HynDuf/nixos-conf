@@ -11,7 +11,6 @@
 
     ./spectacle
     ./redshift
-    ./vencord
     ./espanso
     ./lsp
     ./lazygit

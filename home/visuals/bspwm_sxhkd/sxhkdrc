@@ -176,8 +176,8 @@ super + x
 super + shift + n
     brightnessctl s 0
 
-super + {F10, F11}
-    brightnessctl s 40{-,+}
+super + {F5, F6}
+    brightnessctl s 20000{-,+}
 
 # change the volume
 
@@ -189,7 +189,7 @@ super + shift + m
 super + alt + m
     pactl set-source-mute 1 toggle
 
-super + shift + {F10, F11}
+super + {F2, F3}
     pactl set-sink-mute 0 false && pactl set-sink-volume 0 {-,+}5%
 
 #
@@ -197,11 +197,11 @@ super + shift + {F10, F11}
 #
 
 # fullscreen screenshot save
-super + End
+super + F10
     ~/bin/screenshot -f
 
 # cropped save
-super + shift + End
+super + shift + F10
     ~/bin/screenshot -s
 
 # clipboard fullscreen
@@ -213,7 +213,7 @@ super + shift + s
     ~/bin/screenshot -sc
 
 # clipboard cropped with edit
-ctrl + End
+ctrl + F10
     ~/bin/screenshot -edit
 
 #

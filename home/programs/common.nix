@@ -78,7 +78,6 @@ in {
     unar
     unstable.anki-bin
     qimgv
-    conda
     xorg.xhost
     qalculate-gtk
     vesktop
@@ -97,11 +96,7 @@ in {
     transmission_4-gtk
     nautilus
     via
-    rustdesk-flutter
     pkg-config
-    beekeeper-studio
-    ngrok
-    postman
     teams-for-linux
     openssl
     nvtopPackages.nvidia
@@ -110,6 +105,7 @@ in {
     socat
     unstable.slack
     unstable.qutebrowser-qt5
+    intel-gpu-tools
   ];
 
   programs = {

@@ -48,7 +48,7 @@
                 {
                   home.packages = [ zen-browser.packages.${system}.specific ];
                 }
-                catppuccin.homeManagerModules.catppuccin
+                catppuccin.homeModules.catppuccin
               ];
             };
           }

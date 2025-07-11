@@ -93,6 +93,7 @@ in
   services.xserver = {
     enable = true;
 
+    dpi = 130;
     windowManager.bspwm = {
       enable = true;
     };
@@ -156,6 +157,7 @@ in
       noto-fonts-cjk-sans
       noto-fonts-emoji
       newcomputermodern
+      font-awesome
 
       # nerdfonts
       nerd-fonts.fira-code
@@ -229,7 +231,6 @@ in
     go
 
     libnotify
-    amdgpu_top
   ];
 
   # Enable CUPS to print documents.
@@ -243,7 +244,7 @@ in
     in
     formatted;
 
-  hardware.pulseaudio.enable = false;
+  services.pulseaudio.enable = false;
   services.pipewire = {
     enable = true;
     audio.enable = true;
