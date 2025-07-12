@@ -1,0 +1,8 @@
+{ ... }:
+{
+  imports = [
+    ./neovim
+    ./vscode
+    ./lsp
+  ];
+}

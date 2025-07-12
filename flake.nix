@@ -2,53 +2,48 @@
   description = "NixOS flake of HynDuf";
 
   inputs = {
-    # NixOS official package source, using the nixos-23.11 branch here
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    nixpkgs-pin.url = "github:nixos/nixpkgs/nixos-unstable";
+    home-manager.url = "github:nix-community/home-manager";
     catppuccin.url = "github:catppuccin/nix";
     zen-browser.url = "github:HynDuf/zen-browser-flake";
-
-    home-manager = {
-      url = "github:nix-community/home-manager";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
   };
 
-  outputs =
-    {
-      self,
-      nixpkgs,
-      catppuccin,
-      zen-browser,
-      home-manager,
-      ...
-    }@inputs:
+  outputs = { self, nixpkgs, nixpkgs-pin, home-manager, ... }@inputs:
     let
       system = "x86_64-linux";
       hostname = "yoru";
       username = "hynduf";
-    in
-    {
+
+      pkgs-unstable = import nixpkgs-pin {
+        inherit system;
+        config.allowUnfree = true;
+      };
+
+    in {
       nixosConfigurations."${hostname}" = nixpkgs.lib.nixosSystem {
         specialArgs = {
           inherit inputs username hostname;
+          pkgs-unstable = pkgs-unstable;
         };
         modules = [
+          ./hosts/hynduf/configuration.nix
 
-          # Import the previous configuration.nix we used,
-          # so the old configuration file still takes effect
-          ./hosts/hynduf
-          catppuccin.nixosModules.catppuccin
+          inputs.catppuccin.nixosModules.catppuccin
+
           home-manager.nixosModules.home-manager
           {
-            home-manager.useGlobalPkgs = true;
-            home-manager.useUserPackages = true;
-            home-manager.users."${username}" = {
-              imports = [
-                ./home
-                {
-                  home.packages = [ zen-browser.packages.${system}.specific ];
-                }
-                catppuccin.homeModules.catppuccin
+            home-manager = {
+              useGlobalPkgs = true;
+              useUserPackages = true;
+              extraSpecialArgs = {
+                inherit inputs username hostname;
+                pkgs-unstable = pkgs-unstable;
+              };
+              users."${username}".imports = [
+                ./home/hynduf
+
+                inputs.catppuccin.homeModules.catppuccin
               ];
             };
           }
