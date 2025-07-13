@@ -16,6 +16,7 @@ ibus-daemon -drxR &
 nm-applet &
 pgrep -x battery-alert >/dev/null || ~/.config/bin/battery-alert &
 pidof syncthing || syncthing -no-browser &
+pidof redshift || redshift &
 trash-empty -f 40 &
 # wmname LG3D & # This is for IntellJ and IntellJ-based (Android Studio)
 copyq &

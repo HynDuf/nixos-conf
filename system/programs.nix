@@ -8,6 +8,8 @@
     xdotool
     brightnessctl
     libnotify
+    networkmanagerapplet
+    i3lock-color
   ];
 
   programs.dconf.enable = true;
@@ -20,4 +22,5 @@
       setSocketVariable = true;
     };
   };
+  security.pam.services.i3lock.enable = true;
 }
