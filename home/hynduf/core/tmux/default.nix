@@ -6,20 +6,18 @@
 {
   programs.tmux = {
     enable = true;
-    shortcut = "a";
     baseIndex = 1;
-    newSession = true;
     prefix = "C-Space";
+    terminal = "tmux-256color";
     escapeTime = 0;
+    newSession = true;
     secureSocket = false;
 
     plugins = with pkgs; [
-      tmuxPlugins.better-mouse-mode
+      tmuxPlugins.vim-tmux-navigator
     ];
 
     extraConfig = ''
-      # https://old.reddit.com/r/tmux/comments/mesrci/tmux_2_doesnt_seem_to_use_256_colors/
-      set -g default-terminal "xterm-256color"
       set -ga terminal-overrides ",*256col*:Tc"
       set -ga terminal-overrides '*:Ss=\E[%p1%d q:Se=\E[ q'
       set-environment -g COLORTERM "truecolor"
@@ -47,16 +45,6 @@
       bind -n S-Left  previous-window
       bind -n S-Right next-window
 
-      set -g @catppuccin_flavour 'mocha'
-      set -g @plugin 'tmux-plugins/tpm'
-      set -g @plugin 'tmux-plugins/tmux-sensible'
-      set -g @plugin 'christoomey/vim-tmux-navigator'
-      set -g @plugin 'dreamsofcode-io/catppuccin-tmux'
-      set -g @plugin 'tmux-plugins/tmux-yank'
-      set -g @plugin 'tmux-plugins/tmux-resurrect'
-
-      run '~/.tmux/plugins/tpm/tpm'
-
       # set vi-mode
       set-window-option -g mode-keys vi
       # keybindings
@@ -81,4 +69,11 @@
       '';
     })
   ];
+  catppuccin.tmux = {
+    enable = true;
+    extraConfig = ''
+      set -g @catppuccin_flavor 'mocha'
+      set -g @catppuccin_window_status_style "rounded"
+    '';
+  };
 }

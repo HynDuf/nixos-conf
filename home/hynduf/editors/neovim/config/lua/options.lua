@@ -2,6 +2,7 @@ require("nvchad.options")
 
 vim.opt.tabstop = 4
 vim.opt.shiftwidth = 4
+vim.opt.relativenumber = true
 vim.keymap.set("x", "p", function()
 	return 'pgv"' .. vim.v.register .. "y"
 end, { remap = false, expr = true })

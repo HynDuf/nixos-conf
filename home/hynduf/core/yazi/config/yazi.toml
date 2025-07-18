@@ -9,8 +9,8 @@ sort_by       = "natural"
 
 [preview]
 wrap       = "yes"
-max_width  = 2500
-max_height = 1500
+max_width  = 6500
+max_height = 4500
 
 [input]
 cursor_blink = true
