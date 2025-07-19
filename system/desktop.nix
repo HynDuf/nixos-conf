@@ -29,13 +29,14 @@ in {
     type = "ibus";
     ibus.engines = [ bamboo pkgs.ibus-engines.anthy ];
   };
-  environment.variables = {
+  environment.sessionVariables = {
     GTK_IM_MODULE = "ibus";
     QT_IM_MODULE = "ibus";
     XMODIFIERS = "@im=ibus";
     QT4_IM_MODULE = "ibus";
     CLUTTER_IM_MODULE = "ibus";
   };
+  services.xserver.desktopManager.runXdgAutostartIfNone = true;
 
   fonts.packages = with pkgs; [
     noto-fonts
