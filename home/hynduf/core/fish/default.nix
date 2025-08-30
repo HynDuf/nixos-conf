@@ -72,6 +72,7 @@
       gcm = "git commit -m";
       gp = "git push";
       clean_cache = "~/.config/bin/clean_nixos";
+      getp = "kitty @ set-spacing padding=0 margin=0 && ssh getp06-vnm";
     };
   };
   xdg.configFile."fish/themes" = {

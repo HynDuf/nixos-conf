@@ -31,6 +31,7 @@ in {
   };
   environment.sessionVariables = {
     GTK_IM_MODULE = "ibus";
+    GLFW_IM_MODULE = "ibus";
     QT_IM_MODULE = "ibus";
     XMODIFIERS = "@im=ibus";
     QT4_IM_MODULE = "ibus";
@@ -74,6 +75,27 @@ in {
 
       START_CHARGE_THRESH_BAT1 = 40;
       STOP_CHARGE_THRESH_BAT1 = 80;
+    };
+  };
+  virtualisation.virtualbox.host.enable = true;
+  users.extraGroups.vboxusers.members = [ "user-with-access-to-virtualbox" ];
+  boot.kernelParams = [ "kvm.enable_virt_at_load=0" ];
+
+  systemd.services.lock-before-sleep = {
+    description = "Lock X screen before sleep";
+    wantedBy = [ "sleep.target" ];
+    after     = [ "sleep.target" ];
+    path = with pkgs; [ bash coreutils i3lock-color ];
+
+    serviceConfig = {
+      Type = "oneshot";
+      User = "hynduf";
+      Environment = [
+        "DISPLAY=:0"
+        "XAUTHORITY=/home/hynduf/.Xauthority"
+        "HOME=/home/hynduf"
+      ];
+      ExecStart = "${pkgs.bash}/bin/bash /home/hynduf/.config/bin/lockscreen";
     };
   };
 }

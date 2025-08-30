@@ -68,6 +68,16 @@
           ControlMaster no
           ControlPath ~/.ssh/master-%r@%n:%p
           ControlPersist no
+
+      Host getp06-kor
+          HostName 1.249.213.116
+          User getp06
+          Port 22554
+
+      Host getp06-vnm
+          HostName 203.205.18.240
+          User getp06
+          Port 20022
     '';
   };
 }

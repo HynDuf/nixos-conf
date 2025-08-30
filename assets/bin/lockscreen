@@ -6,7 +6,7 @@ date=7aa2f7
 verify=7aa2f7
 path=~/Pictures
 
-i3lock -n --force-clock \
+i3lock-color -n --force-clock \
     -i "$path/wallpapers/dark-magical-forest.jpg" \
     -e --indicator --radius=24 --ring-width=48 \
     --inside-color=$fg --ring-color=$fg \

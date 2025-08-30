@@ -15,6 +15,7 @@
   programs.dconf.enable = true;
   programs.adb.enable = true;
   programs.fish.enable = true;
+  virtualisation.podman.enable = true;
   virtualisation.docker = {
     enable = true;
     rootless = {

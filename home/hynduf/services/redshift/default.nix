@@ -6,7 +6,7 @@
       day = 6000;
       night = 3200;
     };
-    latitude = 18.0;
-    longitude = 110.0;
+    dawnTime = "06:30-07:30";
+    duskTime = "21:00-22:00";
   };
 }

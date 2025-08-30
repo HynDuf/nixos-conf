@@ -46,7 +46,7 @@
     poppler
     ffmpegthumbnailer
     unar
-    anki-bin
+    anki
     qimgv
     xorg.xhost
     qalculate-gtk
@@ -75,7 +75,7 @@
     slack
     qutebrowser
     intel-gpu-tools
-    skippy-xd
     feh
+    pulseaudio
   ];
 }
