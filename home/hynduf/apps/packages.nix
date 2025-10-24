@@ -77,5 +77,6 @@
     intel-gpu-tools
     feh
     pulseaudio
+    bitwarden-desktop
   ];
 }

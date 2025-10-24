@@ -4,9 +4,9 @@
     enable = true;
     temperature = {
       day = 6000;
-      night = 3200;
+      night = 2700;
     };
-    dawnTime = "06:30-07:30";
-    duskTime = "21:00-22:00";
+    dawnTime = "07:30-08:30";
+    duskTime = "19:50-20:50";
   };
 }
