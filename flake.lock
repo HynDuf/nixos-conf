@@ -58,11 +58,11 @@
     "dotfiles": {
       "flake": false,
       "locked": {
-        "lastModified": 1761408770,
-        "narHash": "sha256-0q/ItnUOSadI0qCOZfiDfi+m+rn3bm2jUtuN8gdujXU=",
+        "lastModified": 1761409943,
+        "narHash": "sha256-ubYu6QWkzFpW+q71Y2NdBAMHlVSeFwBb+wEwNqDmzts=",
         "owner": "HynDuf",
         "repo": "dots-hyprland",
-        "rev": "25554d599ef84a3ba3e6a41dff720be8e7884451",
+        "rev": "869f7b0804b3545582d7fabf899df94d259661b1",
         "type": "github"
       },
       "original": {

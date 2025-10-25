@@ -1,7 +1,7 @@
 local autocmd = vim.api.nvim_create_autocmd
 
 -- Fcitx5 typing
-local fcitx_cur = "bamboo"
+local fcitx_cur = "keyboard-us"
 local fcitx_en  = "keyboard-us"
 
 local function has_fcitx()
