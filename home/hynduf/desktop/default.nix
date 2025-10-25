@@ -3,7 +3,7 @@
   imports = [
     ./common
 
-    ./x11
+    # ./x11
 
     # ./hyprland
   ];

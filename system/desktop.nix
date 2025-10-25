@@ -1,7 +1,5 @@
 { pkgs, ... }:
-let
-  bamboo = pkgs.callPackage ../pkgs/ibus-bamboo.nix { };
-in {
+{
   services.pipewire = {
     enable = true;
     audio.enable = true;
@@ -9,33 +7,28 @@ in {
     pulse.enable = true;
     jack.enable = true;
   };
+  
   security.rtkit.enable = true;
   services.pulseaudio.enable = false;
 
-  services.xserver = {
-    enable = true;
-    dpi = 130;
-    windowManager.bspwm.enable = true;
-    desktopManager.xterm.enable = false;
-    displayManager.startx.enable = true;
-    xkb.options = "caps:swapescape";
-  };
-  services.displayManager.defaultSession = "none+bspwm";
   console.useXkbConfig = true;
 
   services.libinput.enable = true;
   i18n.inputMethod = {
     enable = true;
-    type = "ibus";
-    ibus.engines = [ bamboo pkgs.ibus-engines.anthy ];
+    type = "fcitx5";
+    fcitx5.addons = with pkgs; [
+      fcitx5-bamboo
+      fcitx5-gtk
+      libsForQt5.fcitx5-qt
+      kdePackages.fcitx5-configtool
+    ];
   };
+
   environment.sessionVariables = {
-    GTK_IM_MODULE = "ibus";
-    GLFW_IM_MODULE = "ibus";
-    QT_IM_MODULE = "ibus";
-    XMODIFIERS = "@im=ibus";
-    QT4_IM_MODULE = "ibus";
-    CLUTTER_IM_MODULE = "ibus";
+    QT_IM_MODULE  = "fcitx";
+    XMODIFIERS    = "@im=fcitx";
+    SDL_IM_MODULE = "fcitx";
   };
   services.xserver.desktopManager.runXdgAutostartIfNone = true;
 
@@ -77,6 +70,7 @@ in {
       STOP_CHARGE_THRESH_BAT1 = 80;
     };
   };
+  services.upower.enable = true;
   virtualisation.virtualbox.host.enable = true;
   users.extraGroups.vboxusers.members = [ "user-with-access-to-virtualbox" ];
   boot.kernelParams = [ "kvm.enable_virt_at_load=0" ];

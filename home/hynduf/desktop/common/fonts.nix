@@ -10,6 +10,4 @@
     nerd-fonts.jetbrains-mono
     nerd-fonts.iosevka
   ];
-
-  fonts.fontconfig.enable = true;
 }

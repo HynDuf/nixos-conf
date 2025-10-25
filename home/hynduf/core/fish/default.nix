@@ -52,11 +52,9 @@
         end
         rm -f -- "$tmp"
       end
-
-      if status --is-login
-          if test -z "$DISPLAY" -a $XDG_VTNR = 1
-              exec startx -- -keeptty
-          end
+      if test -z "$DISPLAY" ;and test "$XDG_VTNR" -eq 1
+          mkdir -p ~/.cache
+          exec Hyprland > ~/.cache/hyprland.log 2>&1
       end
     '';
     shellInitLast = ''

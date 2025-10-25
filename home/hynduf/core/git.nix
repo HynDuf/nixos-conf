@@ -3,10 +3,15 @@
   programs.git = {
     enable = true;
 
-    userName = "hynduf";
-    userEmail = "chauhuynhnoc@gmail.com";
-    delta = {
-      enable = true;
+    settings = {
+      user = {
+        name = "hynduf";
+        email = "chauhuynhnoc@gmail.com";
+      };
     };
+  };
+  programs.delta = {
+    enable = true;
+    enableGitIntegration = true;
   };
 }

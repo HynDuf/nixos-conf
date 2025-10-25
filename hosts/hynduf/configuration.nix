@@ -8,6 +8,7 @@
     ../../system/boot.nix
     ../../system/desktop.nix
     ../../system/programs.nix
+    ../../system/illogical-impulse.nix
 
     ./hardware-configuration.nix
   ];
