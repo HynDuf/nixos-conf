@@ -6,10 +6,10 @@
       name = "MonoLisa";
       size = 11;
     };
-    iconTheme = {
-      name = "Papirus";
-      package = pkgs.papirus-icon-theme;
-    };
+    # iconTheme = {
+    #   name = "Papirus";
+    #   package = pkgs.papirus-icon-theme;
+    # };
     gtk3.extraConfig = {
       "gtk-im-module" = "fcitx";
     };

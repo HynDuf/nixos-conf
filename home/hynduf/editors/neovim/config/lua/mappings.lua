@@ -2,6 +2,30 @@ require("nvchad.mappings")
 
 local map = vim.keymap.set
 
+local function find_files_synced()
+  local builtin = require("telescope.builtin")
+  local opts = {}
+  if vim.g.nvim_tree_show_dotfiles == 1 then
+    -- Respect .gitignore but include dotfiles
+    opts.hidden = true
+    opts.no_ignore = false
+  end
+  builtin.find_files(opts)
+end
+
+local function live_grep_synced()
+  local builtin = require("telescope.builtin")
+  local opts = {}
+  -- Use additional_args to avoid clobbering your global Telescope config
+  opts.additional_args = function()
+    if vim.g.nvim_tree_show_dotfiles == 1 then
+      return { "--hidden", "--glob=!.git" }
+    end
+    return {}
+  end
+  builtin.live_grep(opts)
+end
+
 map("n", "<Esc>", "<Esc><cmd>noh<CR>", { desc = "general clear highlights" })
 map("n", "j", "gj", { desc = "Move down in wrapped line" })
 map("n", "k", "gk", { desc = "Move up in wrapped line" })
@@ -12,7 +36,10 @@ map("n", "<A-k>", ":m .-2<CR>==", { desc = "Move line up" })
 map("v", "<A-j>", ":m '>+1<CR>gv=gv", { desc = "Move lines down" })
 map("v", "<A-k>", ":m '<-2<CR>gv=gv", { desc = "Move lines up" })
 map("n", "<C-a>", "ggVG", { desc = "Select all" })
-map("n", "<A-o>", "<cmd> Telescope find_files <CR>", { desc = "Find files" })
+
+-- MODIFIED: Use our custom function for finding files
+map("n", "<A-o>", find_files_synced, { desc = "Find files (sync w/ nvim-tree)" })
+
 map("n", "<A-b>", "<cmd> Telescope buffers <CR>", { desc = "Find opened files" })
 map("n", "mm", ":b#<CR>", { desc = "Open last visited buffer" })
 map("n", "<C-z>", function()
@@ -26,21 +53,6 @@ map("n", "<leader>o", "<cmd>Portal jumplist backward<CR>", { desc = "Portal Back
 map("n", "<leader>i", "<cmd>Portal jumplist forward<CR>", { desc = "Portal Forward" })
 map("n", "<leader>co", "<cmd>Outline<CR>", { desc = "Toggle Outline" })
 
--- Doesn't work as expected yet
--- map({ "n", "t" }, "<F9>", function()
--- 	require("nvchad.term").runner({
--- 		id = "runner",
--- 		pos = "sp",
--- 		cmd = function()
--- 			local file = vim.fn.expand("%:p")
--- 			local file_wo_ext = vim.fn.expand("%:p:r")
--- 			local ft = vim.bo.ft
--- 			local ft_cmds = {
--- 				python = "python " .. file,
--- 				cpp = "g++ -std=c++17 -O2 -DHynDuf " .. file .. " -o " .. file_wo_ext,
--- 			}
--- 			return ft_cmds[ft]
--- 		end,
--- 		clear_cmd = "",
--- 	})
--- end, { desc = "Code Runner" })
+-- ADDED: Override NvChad's default live_grep to use our custom function
+-- The default NvChad keymap for live_grep is <leader>fw
+map("n", "<leader>fw", live_grep_synced, { desc = "Live Grep (sync w/ nvim-tree)" })
